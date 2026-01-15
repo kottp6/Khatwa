@@ -846,7 +846,7 @@ const enStudyInSpainContent: {
     systemTitle: "Your Pathway Through The Spanish Education System",
     systemIntro: "Our programs fit within the official Spanish educational framework, offering a direct path to a professional title.",
     systemSteps: [],
-    systemImage: "/assets/english.jpg",
+    systemImage: "./assets/english.jpg",
     supportTitle: "Our All-Inclusive Support Package",
     supportIntro: "From your application in your home country to your full settlement in Spain, we manage every step of the process with expert care.",
     supportServices: [
@@ -900,7 +900,7 @@ const arStudyInSpainContent: typeof enStudyInSpainContent = {
     systemTitle: "مسارك عبر نظام التعليم الإسباني",
     systemIntro: "تتناسب برامجنا مع الإطار التعليمي الإسباني الرسمي، وتقدم مسارًا مباشرًا للحصول على لقب مهني.",
     systemSteps: [],
-    systemImage: "/assets/arabic.jpg",
+    systemImage: "./assets/arabic.jpg",
     supportTitle: "باقة دعمنا الشاملة",
     supportIntro: "من طلبك في بلدك إلى استقرارك الكامل في إسبانيا، ندير كل خطوة في العملية بعناية فائقة.",
     supportServices: [
@@ -2198,7 +2198,7 @@ export const content = {
             systemTitle: "Tu Camino a Través del Sistema Educativo Español",
             systemIntro: "Nuestros programas se ajustan al marco educativo oficial español, ofreciendo un camino directo hacia un título profesional.",
             systemSteps: [],
-            systemImage: "/assets/spain.jpg",
+            systemImage: "./assets/spain.jpg",
             supportTitle: "Nuestro Paquete de Apoyo Todo Incluido",
             supportIntro: "Desde tu solicitud en tu país de origen hasta tu completo establecimiento en España, gestionamos cada paso del proceso con cuidado experto.",
             supportServices: [
