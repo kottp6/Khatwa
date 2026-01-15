@@ -1,5 +1,9 @@
 // FIX: Import React to resolve 'Cannot find namespace React' error, which was caused by using React.ElementType in an inline type definition.
 import React from 'react';
+import TiktokIcon from './components/TiktokIcon';
+import englishSystemImage from './assets/english.jpg';
+import arabicSystemImage from './assets/arabic.jpg';
+import spainSystemImage from './assets/spain.jpg';
 import type { FounderLink, EducationStep, Package, OtherServiceItem, HomeCard, TourismPackage, Slide, SocialLink, ServiceOverviewCategory, FAQCategory, FeaturePoint, ServicePoint } from './types';
 // FIX: Imported missing icons from lucide-react to be used in the 'tourism' content.
 import { GraduationCap, BookUser, University, UserCheck, Briefcase, Plane, Wallet, Building, Laptop, Stamp, Facebook, Youtube, Instagram, Twitter, Linkedin, MessageCircle, HelpCircle, Scale, Home, Users, RefreshCw, UsersRound, Building2, Award, ShieldCheck, TrendingUp, Languages, FileCheck, School, Landmark, Target, Sailboat, Lightbulb, FileSignature, Gem, Sparkles, Car, Compass, ConciergeBell, Heart, Clock, Monitor, FileText, Music } from 'lucide-react';
@@ -846,7 +850,7 @@ const enStudyInSpainContent: {
     systemTitle: "Your Pathway Through The Spanish Education System",
     systemIntro: "Our programs fit within the official Spanish educational framework, offering a direct path to a professional title.",
     systemSteps: [],
-    systemImage: "./assets/english.jpg",
+    systemImage: englishSystemImage,
     supportTitle: "Our All-Inclusive Support Package",
     supportIntro: "From your application in your home country to your full settlement in Spain, we manage every step of the process with expert care.",
     supportServices: [
@@ -900,7 +904,7 @@ const arStudyInSpainContent: typeof enStudyInSpainContent = {
     systemTitle: "مسارك عبر نظام التعليم الإسباني",
     systemIntro: "تتناسب برامجنا مع الإطار التعليمي الإسباني الرسمي، وتقدم مسارًا مباشرًا للحصول على لقب مهني.",
     systemSteps: [],
-    systemImage: "./assets/arabic.jpg",
+    systemImage: arabicSystemImage,
     supportTitle: "باقة دعمنا الشاملة",
     supportIntro: "من طلبك في بلدك إلى استقرارك الكامل في إسبانيا، ندير كل خطوة في العملية بعناية فائقة.",
     supportServices: [
@@ -2198,7 +2202,7 @@ export const content = {
             systemTitle: "Tu Camino a Través del Sistema Educativo Español",
             systemIntro: "Nuestros programas se ajustan al marco educativo oficial español, ofreciendo un camino directo hacia un título profesional.",
             systemSteps: [],
-            systemImage: "./assets/spain.jpg",
+            systemImage: spainSystemImage,
             supportTitle: "Nuestro Paquete de Apoyo Todo Incluido",
             supportIntro: "Desde tu solicitud en tu país de origen hasta tu completo establecimiento en España, gestionamos cada paso del proceso con cuidado experto.",
             supportServices: [
