@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Logo } from './Logo';
 
 interface SplashScreenProps {
     onLoadingComplete: () => void;
@@ -53,43 +54,8 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onLoadingComplete }) => {
                     </div>
 
                     {/* Main content */}
-                    <div className="relative z-10 text-center">
-                        {/* Khatwa text with animation */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="mb-8"
-                        >
-                            <motion.h1
-                                className="text-7xl md:text-8xl font-bold text-white mb-4"
-                                initial={{ letterSpacing: '0.5em', opacity: 0 }}
-                                animate={{ letterSpacing: '0.1em', opacity: 1 }}
-                                transition={{ duration: 1, delay: 0.3 }}
-                            >
-                                Khatwa
-                            </motion.h1>
-
-                            {/* Arabic text */}
-                            <motion.p
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.8 }}
-                                className="text-2xl md:text-3xl text-[#D9B44A] font-semibold"
-                            >
-                                خطوة
-                            </motion.p>
-                        </motion.div>
-
-                        {/* Tagline */}
-                        <motion.p
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.6, delay: 1.2 }}
-                            className="text-lg md:text-xl text-gray-300 font-light"
-                        >
-                            Your First Step to Spain
-                        </motion.p>
+                    <div className="relative z-10 text-center scale-150">
+                        <Logo theme="light" />
 
                         {/* Loading animation */}
                         <motion.div

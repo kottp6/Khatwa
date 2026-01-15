@@ -1,0 +1,10 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- The "Step" part (Vertical bar of K) -->
+  <rect x="15" y="65" width="12" height="15" fill="#D9B44A" />
+  <rect x="27" y="50" width="12" height="30" fill="#D9B44A" />
+  <rect x="39" y="35" width="12" height="45" fill="#D9B44A" />
+
+  <!-- The "K" arms -->
+  <path d="M60 55 L85 20" stroke="#0A2342" stroke-width="10" stroke-linecap="round" />
+  <path d="M60 55 L85 85" stroke="#0A2342" stroke-width="10" stroke-linecap="round" />
+</svg>
