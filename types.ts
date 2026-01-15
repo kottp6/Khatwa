@@ -34,6 +34,7 @@ export interface EducationStep {
   duration: string;
   description: string;
   level: string;
+  image?: string;
 }
 
 export interface ServiceOverviewItem {
@@ -50,6 +51,7 @@ export interface ServiceOverviewCategory {
 export interface OtherServiceItem {
   title: string;
   description: string;
+  image?: string;
 }
 
 export interface Package {
@@ -117,4 +119,16 @@ export interface TourismContent {
     text: string;
     button: string;
   };
+}
+
+export interface SEOData {
+  title: string;
+  description: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+}
+
+export interface PageMetadata {
+  [key: string]: SEOData;
 }

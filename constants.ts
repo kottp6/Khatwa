@@ -1,11 +1,20 @@
-// FIX: Import React to resolve 'Cannot find namespace React' error, which was caused by using React.ElementType in an inline type definition.
 import React from 'react';
-import TiktokIcon from './components/TiktokIcon';
-import englishSystemImage from './assets/english.jpg';
-import arabicSystemImage from './assets/arabic.jpg';
-import spainSystemImage from './assets/spain.jpg';
+import englishSystemImage from './assets/english.webp';
+import arabicSystemImage from './assets/arabic.webp';
+import spainSystemImage from './assets/spain.webp';
+import heroImage1 from './assets/hero.webp';
+import heroImage2 from './assets/hero2.webp';
+import heroImage3 from './assets/hero3.webp';
+import heroImage4 from './assets/hero4.webp';
+import heroImage5 from './assets/hero5.webp';
+import heroImage6 from './assets/hero6.webp';
+import programImage1 from './assets/program1.webp';
+import programImage2 from './assets/program2.webp';
+import programImage3 from './assets/program3.webp';
+import programImage4 from './assets/program4.webp';
+import programImage5 from './assets/program5.webp';
+import programImage6 from './assets/program6.webp';
 import type { FounderLink, EducationStep, Package, OtherServiceItem, HomeCard, TourismPackage, Slide, SocialLink, ServiceOverviewCategory, FAQCategory, FeaturePoint, ServicePoint } from './types';
-// FIX: Imported missing icons from lucide-react to be used in the 'tourism' content.
 import { GraduationCap, BookUser, University, UserCheck, Briefcase, Plane, Wallet, Building, Laptop, Stamp, Facebook, Youtube, Instagram, Twitter, Linkedin, MessageCircle, HelpCircle, Scale, Home, Users, RefreshCw, UsersRound, Building2, Award, ShieldCheck, TrendingUp, Languages, FileCheck, School, Landmark, Target, Sailboat, Lightbulb, FileSignature, Gem, Sparkles, Car, Compass, ConciergeBell, Heart, Clock, Monitor, FileText, Music } from 'lucide-react';
 
 
@@ -184,109 +193,7 @@ const esHomeCards: HomeCard[] = [
     },
 ];
 
-const enTourismPackages: TourismPackage[] = [
-    {
-        title: "Andalusian Dream",
-        duration: "7 Days / 6 Nights",
-        description: "Immerse yourself in the heart of Andalusia. Explore the historic cities of Seville, Granada, and Córdoba, and witness the passion of Flamenco.",
-        highlights: ["Alhambra Palace Tour", "Seville Cathedral & Giralda", "Mosque-Cathedral of Córdoba", "Authentic Flamenco Show"],
-        image: "https://images.unsplash.com/photo-1574402241953-3351a7e48b23?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        title: "Galician Wonders & Porto",
-        duration: "5 Days / 4 Nights",
-        description: "Discover the lush landscapes of Galicia and the vibrant city of Porto, Portugal. Enjoy fresh seafood, ancient pilgrimage routes, and stunning coastlines.",
-        highlights: ["Santiago de Compostela Cathedral", "Cíes Islands Boat Trip", "Rías Baixas Wineries Tour", "Day Trip to Porto, Portugal"],
-        image: "https://images.unsplash.com/photo-1587883906318-188350b232ae?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        title: "Basque Country & Gastronomy",
-        duration: "6 Days / 5 Nights",
-        description: "A food lover's paradise. Journey through the Basque Country, from the modern art of Bilbao to the culinary capital of San Sebastián.",
-        highlights: ["Guggenheim Museum Bilbao", "San Sebastián Pintxos Tour", "Rioja Wine Region Visit", "Coastal towns of Getaria & Zumaia"],
-        image: "https://images.unsplash.com/photo-1588194232352-06ac5b552656?q=80&w=800&auto=format&fit=crop"
-    }
-];
 
-const arTourismPackages: TourismPackage[] = [
-    {
-        title: "الحلم الأندلسي",
-        duration: "7 أيام / 6 ليال",
-        description: "انغمس في قلب الأندلس. استكشف المدن التاريخية مثل إشبيلية وغرناطة وقرطبة، وشاهد شغف الفلامنكو.",
-        highlights: ["جولة في قصر الحمراء", "كاتدرائية إشبيلية والجيرالدا", "مسجد - كاتدرائية قرطبة", "عرض فلامنكو أصيل"],
-        image: "https://images.unsplash.com/photo-1574402241953-3351a7e48b23?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        title: "عجائب غاليسيا وبورتو",
-        duration: "5 أيام / 4 ليال",
-        description: "اكتشف المناظر الطبيعية الخصبة في غاليسيا ومدينة بورتو النابضة بالحياة في البرتغال. استمتع بالمأكولات البحرية الطازجة وطرق الحج القديمة والسواحل المذهلة.",
-        highlights: ["كاتدرائية سانتياغو دي كومبوستيلا", "رحلة بحرية إلى جزر Cíes", "جولة في مصانع النبيذ Rías Baixas", "رحلة يوم واحد إلى بورتو، البرتغال"],
-        image: "https://images.unsplash.com/photo-1587883906318-188350b232ae?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        title: "بلاد الباسك وفن الطهي",
-        duration: "6 أيام / 5 ليال",
-        description: "جنة عشاق الطعام. رحلة عبر بلاد الباسك، من فن بلباو الحديث إلى عاصمة الطهي سان سيباستيان.",
-        highlights: ["متحف غوغنهايم بلباو", "جولة بينتكسوس في سان سيباستيان", "زيارة منطقة نبيذ ريوخا", "مدن ساحلية مثل غيتاريا وزومايا"],
-        image: "https://images.unsplash.com/photo-1588194232352-06ac5b552656?q=80&w=800&auto=format&fit=crop"
-    }
-];
-
-const esTourismPackages: TourismPackage[] = [
-    {
-        title: "Sueño Andaluz",
-        duration: "7 Días / 6 Noches",
-        description: "Sumérgete en el corazón de Andalucía. Explora las ciudades históricas de Sevilla, Granada y Córdoba, y presencia la pasión del Flamenco.",
-        highlights: ["Tour del Palacio de la Alhambra", "Catedral de Sevilla y Giralda", "Mezquita-Catedral de Córdoba", "Espectáculo Auténtico de Flamenco"],
-        image: "https://images.unsplash.com/photo-1574402241953-3351a7e48b23?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        title: "Maravillas de Galicia y Oporto",
-        duration: "5 Días / 4 Noches",
-        description: "Descubre los exuberantes paisajes de Galicia y la vibrante ciudad de Oporto, Portugal. Disfruta de mariscos frescos, antiguas rutas de peregrinación y costas impresionantes.",
-        highlights: ["Catedral de Santiago de Compostela", "Excursión en Barco a las Islas Cíes", "Tour de Bodegas de Rías Baixas", "Excursión de un Día a Oporto, Portugal"],
-        image: "https://images.unsplash.com/photo-1587883906318-188350b232ae?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-        title: "País Vasco y Gastronomía",
-        duration: "6 Días / 5 Noches",
-        description: "Un paraíso para los amantes de la comida. Viaja por el País Vasco, desde el arte moderno de Bilbao hasta la capital culinaria de San Sebastián.",
-        highlights: ["Museo Guggenheim Bilbao", "Tour de Pintxos en San Sebastián", "Visita a la Región Vinícola de Rioja", "Pueblos costeros de Getaria y Zumaia"],
-        image: "https://images.unsplash.com/photo-1588194232352-06ac5b552656?q=80&w=800&auto=format&fit=crop"
-    }
-];
-
-
-const enEducationSteps: EducationStep[] = [
-    { level: "1", title: "ESO (Compulsory Secondary Education)", duration: "4 years (ages 12-16)", description: "Foundation of Spanish education." },
-    { level: "2", title: "Basic Vocational Training", duration: "2 years", description: "A practical alternative to academic routes." },
-    { level: "3", title: "Intermediate Vocational Training (Ciclo Medio)", duration: "2 years", description: "Includes internships, leads to a 'Technician' title." },
-    { level: "4", title: "Baccalaureate (Bachillerato)", duration: "2 years", description: "Academic path required for university access." },
-    { level: "5", title: "Higher Vocational Training (Ciclo Superior)", duration: "2 years", description: "Advanced training, leads to 'Higher Technician' title and allows university access." },
-    { level: "6", title: "University Degree (Grado)", duration: "4 years", description: "Standard university undergraduate degree." },
-    { level: "7", title: "Master's Degree (Máster)", duration: "1-2 years", description: "Postgraduate specialization." },
-];
-
-const arEducationSteps: EducationStep[] = [
-    { level: "1", title: "التعليم الثانوي الإلزامي (ESO)", duration: "4 سنوات (12-16 سنة)", description: "أساس نظام التعليم الإسباني." },
-    { level: "2", title: "التدريب المهني الأساسي", duration: "سنتان", description: "بديل عملي للمسارات الأكاديمية." },
-    { level: "3", title: "التدريب المهني المتوسط (Ciclo Medio)", duration: "سنتان", description: "يشمل تدريبًا عمليًا ويؤدي إلى لقب 'فني'." },
-    { level: "4", title: "البكالوريا (Bachillerato)", duration: "سنتان", description: "المسار الأكاديمي المطلوب للالتحاق بالجامعة." },
-    // FIX: Added missing 'title' property key.
-    { level: "5", title: "التدريب المهني العالي (Ciclo Superior)", duration: "سنتان", description: "تدريب متقدم يؤدي إلى لقب 'فني أعلى' ويتيح الالتحاق بالجامعة." },
-    { level: "6", title: "الشهادة الجامعية (Grado)", duration: "4 سنوات", description: "درجة البكالوريوس الجامعية القياسية." },
-    { level: "7", title: "درجة الماجستير (Máster)", duration: "1-2 سنوات", description: "تخصص دراسات عليا." },
-];
-
-const esEducationSteps: EducationStep[] = [
-    { level: "1", title: "ESO (Educación Secundaria Obligatoria)", duration: "4 años (12-16 años)", description: "Base de la educación española." },
-    { level: "2", title: "Formación Profesional Básica", duration: "2 años", description: "Una alternativa práctica a las rutas académicas." },
-    { level: "3", title: "Formación Profesional de Grado Medio (Ciclo Medio)", duration: "2 años", description: "Incluye prácticas, conduce al título de 'Técnico'." },
-    { level: "4", title: "Bachillerato", duration: "2 años", description: "Ruta académica requerida para acceso universitario." },
-    { level: "5", title: "Formación Profesional de Grado Superior (Ciclo Superior)", duration: "2 años", description: "Formación avanzada, conduce al título de 'Técnico Superior' y permite acceso universitario." },
-    { level: "6", title: "Grado Universitario", duration: "4 años", description: "Título universitario de grado estándar." },
-    { level: "7", title: "Máster", duration: "1-2 años", description: "Especialización de posgrado." },
-];
 
 const enDigitalNomadSteps: EducationStep[] = [
     { level: "1", title: "Eligibility Assessment", duration: "1-2 Weeks", description: "Review of remote work contracts, income requirements (~€2,646/month), and professional background." },
@@ -408,83 +315,7 @@ const esMinorStudentSteps: EducationStep[] = [
     { level: "5", title: "Integración y Seguimiento", duration: "1 Año", description: "Obtención del NIE, empadronamiento y provisión de informes académicos y legales mensuales a los padres." },
 ];
 
-const enPackages: Package[] = [
-    {
-        title: "Standard Package",
-        description: "Full legal and administrative support for your Digital Nomad visa application and settlement in Spain.",
-        features: [
-            "Full legal assistance",
-            "Airport pickup in Vigo",
-            "First-night hotel accommodation",
-            "Support with all official procedures (NIE, bank account, city registration)",
-            "Follow-up until you receive your residency card (TIE)"
-        ],
-        isPopular: false
-    },
-    {
-        title: "Tourism Package",
-        description: "Combine your residency process with a curated 2-week tour of Galicia and Northern Portugal.",
-        features: [
-            "All Standard Package services",
-            "2-week, 3-4 star hotel accommodation",
-            "Guided visits to Vigo, Ourense, Santiago de Compostela, Baiona",
-            "Day trip to Porto, Portugal",
-            "Personal escort and comfortable transport"
-        ],
-        isPopular: true
-    },
-    {
-        title: "VIP Package",
-        description: "A premium experience with 4-5 star hotels, a private car, and personal supervision by Dr. Abdelrahman.",
-        features: [
-            "All Tourism Package services",
-            "Upgraded 4-5 star hotels",
-            "Private car with a driver for all tours",
-            "Personal supervision by Dr. Abdelrahman himself",
-            "Maximum luxury and comfort"
-        ],
-        isPopular: false
-    }
-];
 
-const arPackages: Package[] = [
-    {
-        title: "الباقة الأساسية",
-        description: "دعم قانوني وإداري كامل لطلب تأشيرة النوماد الرقمي والاستقرار في إسبانيا.",
-        features: [
-            "مساعدة قانونية كاملة",
-            "استقبال من المطار في فيغو",
-            "إقامة فندقية لليلة الأولى",
-            "دعم في جميع الإجراءات الرسمية (NIE، حساب بنكي، تسجيل بلدي)",
-            "متابعة حتى استلام بطاقة الإقامة (TIE)"
-        ],
-        isPopular: false
-    },
-    {
-        title: "باقة السياحة",
-        description: "اجمع بين إجراءات إقامتك وجولة سياحية منظمة لمدة أسبوع واحد في غاليسيا وشمال البرتغال.",
-        features: [
-            "جميع خدمات الباقة الأساسية",
-            "إقامة فندقية لمدة أسبوع واحد في فنادق 3-4 نجوم",
-            "زيارات سياحية موجهة إلى فيغو، أورينسي، سانتياغو دي كومبوستيلا، بايونا",
-            "رحلة يوم واحد إلى بورتو، البرتغال",
-            "مرافقة شخصية ونقل مريح"
-        ],
-        isPopular: true
-    },
-    {
-        title: "باقة كبار الشخصيات (VIP)",
-        description: "تجربة فاخرة مع فنادق 4-5 نجوم، سيارة خاصة، وإشراف شخصي من د. عبدالرحمن.",
-        features: [
-            "جميع خدمات باقة السياحة",
-            "فنادق مطورة من فئة 4-5 نجوم",
-            "سيارة خاصة مع سائق لجميع الجولات",
-            "إشراف شخصي من د. عبدالرحمن بنفسه",
-            "أقصى درجات الرفاهية والراحة"
-        ],
-        isPopular: false
-    }
-];
 
 const enOtherServices: OtherServiceItem[] = [
     { title: "Investment & Golden Visa", description: "Expert guidance on securing residency through significant investment in Spain." },
@@ -496,44 +327,7 @@ const arOtherServices: OtherServiceItem[] = [
     { title: "باقات سياحية مخصصة", description: " نقوم بتصميم مسارات رحلات VIP شخصية عبر إسبانيا وأوروبا، مثل باقتنا الشهيرة لمدة أسبوع في بلدين." }
 ];
 
-const esPackages: Package[] = [
-    {
-        title: "Paquete Estándar",
-        description: "Apoyo legal y administrativo completo para tu solicitud de visa de Nómada Digital y establecimiento en España.",
-        features: [
-            "Asistencia legal completa",
-            "Recogida en el aeropuerto de Vigo",
-            "Alojamiento en hotel la primera noche",
-            "Apoyo con todos los procedimientos oficiales (NIE, cuenta bancaria, empadronamiento)",
-            "Seguimiento hasta que recibas tu tarjeta de residencia (TIE)"
-        ],
-        isPopular: false
-    },
-    {
-        title: "Paquete Turístico",
-        description: "Combina tu proceso de residencia con un tour de 2 semanas por Galicia y el Norte de Portugal.",
-        features: [
-            "Todos los servicios del Paquete Estándar",
-            "Alojamiento en hotel de 3-4 estrellas por 2 semanas",
-            "Visitas guiadas a Vigo, Ourense, Santiago de Compostela, Baiona",
-            "Excursión de un día a Oporto, Portugal",
-            "Acompañamiento personal y transporte cómodo"
-        ],
-        isPopular: true
-    },
-    {
-        title: "Paquete VIP",
-        description: "Una experiencia premium con hoteles de 4-5 estrellas, coche privado y supervisión personal del Dr. Abdelrahman.",
-        features: [
-            "Todos los servicios del Paquete Turístico",
-            "Hoteles mejorados de 4-5 estrellas",
-            "Coche privado con conductor para todos los tours",
-            "Supervisión personal del Dr. Abdelrahman",
-            "Máximo lujo y comodidad"
-        ],
-        isPopular: false
-    }
-];
+
 
 const esOtherServices: OtherServiceItem[] = [
     { title: "Inversión y Visado Dorado", description: "Orientación experta para asegurar la residencia a través de inversión significativa en España." },
@@ -938,6 +732,73 @@ const arStudyInSpainContent: typeof enStudyInSpainContent = {
 
 export const content = {
     en: {
+        metadata: {
+            home: {
+                title: "Khatwa - Your Gateway to Spain | Study, Residency & Investment",
+                description: "Expert guidance for studying, living, and investing in Spain. We handle visas, residency, and legal procedures for a seamless transition.",
+                keywords: ["Spain", "Visa", "Study", "Investment", "Residency", "Khatwa", "Immigration"]
+            },
+            about: {
+                title: "About Khatwa | Trusted Spanish Immigration Consultants",
+                description: "Learn about Khatwa's mission to bridge the gap between you and your dreams in Spain. Founded by Dr. Abdelrahman Geneidy.",
+                keywords: ["About Us", "Team", "Mission", "Dr. Abdelrahman Geneidy"]
+            },
+            study: {
+                title: "Vocational Training in Spain | Guaranteed Admission & Internships",
+                description: "Fast track your career with vocational training in Spain. Paid internships, guaranteed admission, and a clear path to residency.",
+                keywords: ["Study", "Vocational Training", "Spain", "Ciclo Formativo", "Internships"]
+            },
+            studentsUnder18: {
+                title: "Study in Spain for Minors | Legal Guardianship & Support",
+                description: "Safe and legal study programs for students under 18 in Spain. Includes full legal guardianship, housing, and academic support.",
+                keywords: ["Minors", "Study Abroad", "Guardianship", "High School"]
+            },
+            postgraduateStudy: {
+                title: "Master's & PhD in Spain | University of Vigo Partnership",
+                description: "Pursue your Master's or PhD in Spain. Official programs with university partnerships and research opportunities.",
+                keywords: ["Masters", "PhD", "Postgraduate", "University of Vigo"]
+            },
+            digitalNomad: {
+                title: "Digital Nomad Visa Spain | Remote Work Residency",
+                description: "Live and work remotely from Spain. We provide complete legal and administrative support for the Digital Nomad Visa.",
+                keywords: ["Digital Nomad", "Remote Work", "Visa", "Beckham Law"]
+            },
+            tourism: {
+                title: "Premium Tourism in Spain | VIP Tours & Residency Scouting",
+                description: "Experience the beauty of Spain with our curated VIP tourism packages. Explore residency and investment opportunities while you travel.",
+                keywords: ["Tourism", "Travel", "Spain", "VIP", "Residency Scouting"]
+            },
+            familyReunification: {
+                title: "Family Reunification Visa Spain | Bring Your Family",
+                description: "Bring your family to live with you legally in Spain. We handle the entire family reunification process smoothly.",
+                keywords: ["Family", "Reunification", "Visa", "Dependents"]
+            },
+            nonLucrative: {
+                title: "Non-Lucrative Visa Spain | Retire & Live in Spain",
+                description: "Retire or live in Spain with passive income. Full residency support for the Non-Lucrative Visa application.",
+                keywords: ["Non-Lucrative", "Retirement", "Visa", "Passive Income"]
+            },
+            contact: {
+                title: "Contact Khatwa | Free Consultation for Spanish Visas",
+                description: "Get in touch with us for a free consultation about your future in Spain. We are here to answer your questions.",
+                keywords: ["Contact", "Consultation", "Spain", "Help"]
+            },
+            faq: {
+                title: "FAQ | Common Questions About Living in Spain",
+                description: "Find answers to common questions about visas, study, residency, and life in Spain.",
+                keywords: ["FAQ", "Questions", "Help", "Guide"]
+            },
+            servicesOverview: {
+                title: "Our Services | Comprehensive Spanish Immigration Support",
+                description: "Explore our full range of services: Study programs, Visas, Residency, Tourism, and Investment in Spain.",
+                keywords: ["Services", "Immigration", "Visa", "Study"]
+            },
+            otherServices: {
+                title: "Other Services | Golden Visa & Investment",
+                description: "Expert legal assistance for Golden Visa, investment opportunities, and customized tourism packages.",
+                keywords: ["Golden Visa", "Investment", "Custom Tours"]
+            }
+        },
         header: {
             logo: "Khatwa",
             nav: {
@@ -984,32 +845,32 @@ export const content = {
                 {
                     title: "Khatwa - Your first step",
                     subtitle: "The fastest route to residency and work. Choose the technical path for rapid qualification for the European job market and legal residency.",
-                    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage1
                 },
                 {
                     title: "Comprehensive Visa Assistance",
                     subtitle: "We assist clients in obtaining various Spanish visas under the guidance of certified immigration lawyers, with full support from start to settlement.",
-                    image: "https://plus.unsplash.com/premium_photo-1675367606828-5d2e9bcd5d80?q=80&w=1823&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage2
                 },
                 {
                     title: "Vocational Education in Spain",
                     subtitle: "The fastest route to residency and work. Choose the technical path for rapid qualification for the European job market and legal residency.",
-                    image: "https://images.unsplash.com/photo-1758384891674-5c593bfd6d07?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage3
                 },
                 {
                     title: "Genuine Postgraduate Studies",
                     subtitle: "With our academic ties to the University of Vigo and research centers like CINBIO, we provide dedicated support for Master’s and PhD applicants.",
-                    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1920&auto=format&fit=crop"
+                    image: heroImage4
                 },
                 {
                     title: "Integrated Investment Solutions",
                     subtitle: "Whether you're buying property or starting a business, we guide you step-by-step through all legal and administrative procedures.",
-                    image: "https://images.unsplash.com/photo-1642224016449-3c6afd7a563d?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage5
                 },
                 {
                     title: "Discovery Tours & Personal Support",
                     subtitle: "Explore opportunities with our organized tours and personal accompaniment service, supporting you from the moment you arrive.",
-                    image: "https://images.unsplash.com/photo-1604624659831-c96ebed547cb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage6
                 }
             ],
             cta: "Discover Our Services",
@@ -1021,9 +882,9 @@ export const content = {
         },
         about: {
             title: "About Khatwa",
-            intro: "Khatwa, meaning 'step' in Arabic, was founded by Dr. Abdelrahman Hamad, a PhD holder from the University of Vigo, Spain. We specialize in facilitating residency, academic, and tourism pathways to Spain, backed by a robust network of legal and academic partners.",
+            intro: "Khatwa, meaning 'step' in Arabic, was founded by Dr. Abdelrahman Geneidy, a PhD holder from the University of Vigo, Spain. We specialize in facilitating residency, academic, and tourism pathways to Spain, backed by a robust network of legal and academic partners.",
             founderTitle: "Meet the Founder",
-            founderName: "Dr. Abdelrahman Hamad",
+            founderName: "Dr. Abdelrahman Geneidy",
             founderCredentials: "PhD in Molecular Medicine",
             founderBio: "With a deep personal and academic connection to Spain, Dr. Abdelrahman founded Khatwa to simplify the complex process of relocating and settling in the country. His firsthand experience as an international student and resident, combined with his extensive network, provides clients with unparalleled guidance and support.",
             founderLinks: enFounderLinks,
@@ -1172,7 +1033,7 @@ export const content = {
             itineraries: [
                 {
                     title: "Program 1: Northwest Spain + Porto (Portugal)",
-                    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=2070&auto=format&fit=crop",
+                    image: programImage1,
                     points: [
                         "Vigo – Evening tour of the city and waterfront.",
                         "Aguda & Cíes Islands (Islas Cíes) – Breathtaking natural landscapes.",
@@ -1185,7 +1046,7 @@ export const content = {
                 },
                 {
                     title: "Program 2: Spain & Portugal Mix",
-                    image: "https://i.pinimg.com/1200x/72/c4/71/72c47185c07547900bec96287627a839.jpg",
+                    image: programImage2,
                     points: [
                         "Vigo – City exploration.",
                         "Porto – Douro River and major historical landmarks.",
@@ -1197,7 +1058,7 @@ export const content = {
                 },
                 {
                     title: "Program 3: Cordoba & Andalusia",
-                    image: "https://i.pinimg.com/1200x/cd/7e/e4/cd7ee43cac0a6990244f04e59f683afd.jpg",
+                    image: programImage3,
                     points: [
                         "Granada – Arrival and exploration of the Old Quarter.",
                         "Alhambra – Visit to the Alhambra Palace and Generalife Gardens.",
@@ -1210,7 +1071,7 @@ export const content = {
                 },
                 {
                     title: "Program 4: Barcelona + Madrid",
-                    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=2070&auto=format&fit=crop",
+                    image: programImage4,
                     points: [
                         "Barcelona – Boat trip at La Rambla.",
                         "Barcelona – Sagrada Familia and Park Güell.",
@@ -1222,7 +1083,7 @@ export const content = {
                 },
                 {
                     title: "Program 5: Switzerland – Nature & Mountains",
-                    image: "https://i.pinimg.com/1200x/66/41/9b/66419b41d040130bf1655289cbd091ac.jpg",
+                    image: programImage5,
                     points: [
                         "Zurich – Arrival and Old Town tour.",
                         "Lucerne – Lake Lucerne and Chapel Bridge.",
@@ -1234,7 +1095,7 @@ export const content = {
                 },
                 {
                     title: "Program 6: France – Netherlands – Belgium",
-                    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop",
+                    image: programImage6,
                     points: [
                         "Paris – Eiffel Tower and Seine River.",
                         "Paris – Louvre Museum and Notre-Dame Cathedral.",
@@ -1483,6 +1344,73 @@ export const content = {
         }
     },
     ar: {
+        metadata: {
+            home: {
+                title: "خطوة - بوابتك إلى إسبانيا | دراسة، إقامة واستثمار",
+                description: "توفر خطوة إرشادات الخبراء للدراسة والعيش والاستثمار في إسبانيا. ندير التأشيرات والإقامة والإجراءات القانونية لانتقال سلس.",
+                keywords: ["إسبانيا", "فيزا", "دراسة", "استثمار", "إقامة", "خطوة", "هجرة"]
+            },
+            about: {
+                title: "عن خطوة | مستشارو الهجرة الإسبانية الموثوقون",
+                description: "تعرف على مهمة خطوة لسد الفجوة بينك وبين أحلامك في إسبانيا. أسسها د. عبدالرحمن جنيدي.",
+                keywords: ["من نحن", "فريق", "مهمة", "د. عبدالرحمن جنيدي"]
+            },
+            study: {
+                title: "التدريب المهني في إسبانيا | قبول مضمون وتدريب",
+                description: "سارع بمسارك المهني مع التدريب المهني في إسبانيا. تدريب مدفوع الأجر، قبول مضمون، ومسار واضح للإقامة.",
+                keywords: ["دراسة", "تدريب مهني", "إسبانيا", "تكوين مهني", "تدريب"]
+            },
+            studentsUnder18: {
+                title: "الدراسة في إسبانيا للقاصرين | وصاية قانونية ودعم",
+                description: "برامج دراسية آمنة وقانونية للطلاب تحت 18 سنة في إسبانيا. تشمل الوصاية القانونية الكاملة، السكن، والدعم الأكاديمي.",
+                keywords: ["قاصرين", "دراسة بالخارج", "وصاية", "ثانوية"]
+            },
+            postgraduateStudy: {
+                title: "ماجستير ودكتوراه في إسبانيا | شراكة جامعة فيغو",
+                description: "تابع دراسة الماجستير أو الدكتوراه في إسبانيا. برامج رسمية مع شراكات جامعية وفرص بحثية.",
+                keywords: ["ماجستير", "دكتوراه", "دراسات عليا", "جامعة فيغو"]
+            },
+            digitalNomad: {
+                title: "فيزا النوماد الرقمي إسبانيا | إقامة العمل عن بعد",
+                description: "عش واعمل عن بعد من إسبانيا. نقدم دعمًا قانونيًا وإداريًا كاملًا لتأشيرة النوماد الرقمي.",
+                keywords: ["نوماد رقمي", "عمل عن بعد", "فيزا", "قانون بيكهام"]
+            },
+            tourism: {
+                title: "سياحة فاخرة في إسبانيا | جولات VIP واستكشاف الإقامة",
+                description: "جرب جمال إسبانيا مع باقات السياحة الفاخرة لدينا. استكشف فرص الإقامة والاستثمار أثناء سفرك.",
+                keywords: ["سياحة", "سفر", "إسبانيا", "VIP", "استكشاف الإقامة"]
+            },
+            familyReunification: {
+                title: "فيزا لم الشمل إسبانيا | أحضر عائلتك",
+                description: "أحضر عائلتك للعيش معك بشكل قانوني في إسبانيا. ندير عملية لم الشمل بالكامل بسلاسة.",
+                keywords: ["عائلة", "لم الشمل", "فيزا", "مرافقين"]
+            },
+            nonLucrative: {
+                title: "الإقامة غير الربحية إسبانيا | تقاعد وعش في إسبانيا",
+                description: "تقاعد أو عش في إسبانيا بدخل سلبي. دعم كامل للإقامة لطلب التأشيرة غير الربحية.",
+                keywords: ["غير ربحية", "تقاعد", "فيزا", "دخل سلبي"]
+            },
+            contact: {
+                title: "تواصل مع خطوة | استشارة مجانية لتأشيرات إسبانيا",
+                description: "تواصل معنا للحصول على استشارة مجانية حول مستقبلك في إسبانيا. نحن هنا للإجابة على أسئلتك.",
+                keywords: ["تواصل", "استشارة", "إسبانيا", "مساعدة"]
+            },
+            faq: {
+                title: "الأسئلة الشائعة | أسئلة شائعة حول العيش في إسبانيا",
+                description: "اعثر على إجابات للأسئلة الشائعة حول التأشيرات، الدراسة، الإقامة، والحياة في إسبانيا.",
+                keywords: ["أسئلة شائعة", "أسئلة", "مساعدة", "دليل"]
+            },
+            servicesOverview: {
+                title: "خدماتنا | دعم هجرة إسباني شامل",
+                description: "استكشف مجموعتنا الكاملة من الخدمات: برامج الدراسة، التأشيرات، الإقامة، السياحة، والاستثمار في إسبانيا.",
+                keywords: ["خدمات", "هجرة", "فيزا", "دراسة"]
+            },
+            otherServices: {
+                title: "خدمات أخرى | الفيزا الذهبية والاستثمار",
+                description: "مساعدة قانونية متخصصة للفيزا الذهبية، فرص الاستثمار، وباقات السياحة المخصصة.",
+                keywords: ["فيزا ذهبية", "استثمار", "جولات مخصصة"]
+            }
+        },
         header: {
             logo: "خطوة",
             nav: {
@@ -1529,27 +1457,27 @@ export const content = {
                 {
                     title: "خطوة - اولي خطواتك",
                     subtitle: "تحت إشراف محامي هجرة معتمدين في إسبانيا، مع متابعة كاملة من البداية حتى الاستقرار.",
-                    image: "https://plus.unsplash.com/premium_photo-1675367606828-5d2e9bcd5d80?q=80&w=1823&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage1
                 },
                 {
                     title: "التعليم الفني في إسبانيا — أقصر طريق للإقامة والعمل",
                     subtitle: "اختر المسار الفني (Ciclo Medio / Superior) لتأهيل سريع لسوق العمل الأوروبي والحصول على إقامة قانونية.",
-                    image: "https://images.unsplash.com/photo-1758384891674-5c593bfd6d07?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage3
                 },
                 {
                     title: "دراسات عليا حقيقية برؤية أكاديمية",
                     subtitle: "بفضل خبرتنا وعلاقاتنا مع باحثين وأساتذة في جامعة فيغو ومراكز بحثية مثل CINBIO نساند طلبة الماجستير والدكتوراه.",
-                    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1920&auto=format&fit=crop"
+                    image: heroImage4
                 },
                 {
                     title: "نوفر لك حلول استثمارية متكاملة",
                     subtitle: "استثمار في سكن أو تأسيس مشروع تجاري — نرشدك وخطوة بخطوة نساعدك في الإجراءات القانونية والإدارية.",
-                    image: "https://images.unsplash.com/photo-1642224016449-3c6afd7a563d?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage5
                 },
                 {
                     title: "برنامج سياحي تعريفي ومرافقة شخصية",
                     subtitle: "جولات مُنظمة لتعريفك بالمناطق وفرص الدراسة والعمل قبل اتخاذ القرار — خدمة مرافقة منذ الوصول.",
-                    image: "https://images.unsplash.com/photo-1604624659831-c96ebed547cb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage6
                 }
             ],
             cta: "اكتشف خدماتنا",
@@ -1712,7 +1640,7 @@ export const content = {
             itineraries: [
                 {
                     title: "البرنامج 1: شمال غرب إسبانيا + بورتو (البرتغال)",
-                    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=2070&auto=format&fit=crop",
+                    image: programImage1,
                     points: [
                         "فيغو – جولة مساءً في المدينة وواجهة البحر.",
                         "زيارة أغودا وجزر سيزاريس (Islas Cíes) – مناظر طبيعية خلابة.",
@@ -1725,7 +1653,7 @@ export const content = {
                 },
                 {
                     title: "البرنامج 2: مزيج إسبانيا والبرتغال",
-                    image: "https://i.pinimg.com/1200x/72/c4/71/72c47185c07547900bec96287627a839.jpg",
+                    image: programImage2,
                     points: [
                         "فيغو – استكشاف المدينة.",
                         "بورتو – نهر دورو واهم المعالم التاريخيه.",
@@ -1737,7 +1665,7 @@ export const content = {
                 },
                 {
                     title: "البرنامج 3: قرطبة والأندلس",
-                    image: "https://i.pinimg.com/1200x/cd/7e/e4/cd7ee43cac0a6990244f04e59f683afd.jpg",
+                    image: programImage3,
                     points: [
                         "الوصول إلى غرناطة – زيارة الحي القديم.",
                         "قصر الحمراء وحدائق الجنّة.",
@@ -1750,7 +1678,7 @@ export const content = {
                 },
                 {
                     title: "البرنامج 4: برشلونة + مدريد",
-                    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=2070&auto=format&fit=crop",
+                    image: programImage4,
                     points: [
                         "برشلونة – جولة بحرية في لا رامبلا.",
                         "ساغرادا فاميليا وبارك غويل.",
@@ -1762,7 +1690,7 @@ export const content = {
                 },
                 {
                     title: "البرنامج 5: سويسرا – الطبيعة والجبال",
-                    image: "https://i.pinimg.com/1200x/66/41/9b/66419b41d040130bf1655289cbd091ac.jpg",
+                    image: programImage5,
                     points: [
                         "الوصول إلى زيورخ – جولة في المدينة القديمة.",
                         "الانتقال إلى لوسيرن – بحيرة لوسيرن وجسر تشابل.",
@@ -1774,7 +1702,7 @@ export const content = {
                 },
                 {
                     title: "البرنامج 6: فرنسا – هولندا – بلجيكا",
-                    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop",
+                    image: programImage6,
                     points: [
                         "الوصول إلى باريس – برج إيفل ونهر السين.",
                         "متحف اللوفر وكاتدرائية نوتردام.",
@@ -2024,6 +1952,73 @@ export const content = {
         }
     },
     es: {
+        metadata: {
+            home: {
+                title: "Khatwa - Tu Puerta a España | Estudio, Residencia e Inversión",
+                description: "Guía experta para estudiar, vivir e invertir en España. Gestionamos visados, residencia y trámites legales para una transición fluida.",
+                keywords: ["España", "Visa", "Estudio", "Inversión", "Residencia", "Khatwa", "Inmigración"]
+            },
+            about: {
+                title: "Sobre Khatwa | Consultores de Inmigración Española de Confianza",
+                description: "Conozca la misión de Khatwa de cerrar la brecha entre usted y sus sueños en España. Fundada por el Dr. Abdelrahman Geneidy.",
+                keywords: ["Sobre Nosotros", "Equipo", "Misión", "Dr. Abdelrahman Geneidy"]
+            },
+            study: {
+                title: "Formación Profesional en España | Admisión Garantizada y Prácticas",
+                description: "Acelere su carrera con formación profesional en España. Prácticas remuneradas, admisión garantizada y un camino claro hacia la residencia.",
+                keywords: ["Estudio", "Formación Profesional", "España", "Ciclo Formativo", "Prácticas"]
+            },
+            studentsUnder18: {
+                title: "Estudios en España para Menores | Tutela Legal y Apoyo",
+                description: "Programas de estudio seguros y legales para estudiantes menores de 18 años en España. Incluye tutela legal completa, alojamiento y apoyo académico.",
+                keywords: ["Menores", "Estudiar en el Extranjero", "Tutela", "Bachillerato"]
+            },
+            postgraduateStudy: {
+                title: "Máster y Doctorado en España | Colaboración con Universidad de Vigo",
+                description: "Realice su Máster o Doctorado en España. Programas oficiales con convenios universitarios y oportunidades de investigación.",
+                keywords: ["Máster", "Doctorado", "Postgrado", "Universidad de Vigo"]
+            },
+            digitalNomad: {
+                title: "Visa Nómada Digital España | Residencia para Teletrabajo",
+                description: "Viva y trabaje en remoto desde España. Brindamos soporte legal y administrativo completo para la Visa de Nómada Digital.",
+                keywords: ["Nómada Digital", "Teletrabajo", "Visa", "Ley Beckham"]
+            },
+            tourism: {
+                title: "Turismo Premium en España | Tours VIP y Scouting de Residencia",
+                description: "Experimente la belleza de España con nuestros paquetes turísticos VIP. Explore oportunidades de residencia e inversión mientras viaja.",
+                keywords: ["Turismo", "Viajes", "España", "VIP", "Scouting de Residencia"]
+            },
+            familyReunification: {
+                title: "Visa de Reagrupación Familiar España | Traiga a su Familia",
+                description: "Traiga a su familia a vivir con usted legalmente en España. Gestionamos todo el proceso de reagrupación familiar sin problemas.",
+                keywords: ["Familia", "Reagrupación", "Visa", "Dependientes"]
+            },
+            nonLucrative: {
+                title: "Visa No Lucrativa España | Jubilarse y Vivir en España",
+                description: "Jubílese o viva en España con ingresos pasivos. Soporte de residencia completo para la solicitud de Visa No Lucrativa.",
+                keywords: ["No Lucrativa", "Jubilación", "Visa", "Ingresos Pasivos"]
+            },
+            contact: {
+                title: "Contacte a Khatwa | Consulta Gratuita para Visados Españoles",
+                description: "Póngase en contacto con nosotros para una consulta gratuita sobre su futuro en España. Estamos aquí para responder a sus preguntas.",
+                keywords: ["Contacto", "Consulta", "España", "Ayuda"]
+            },
+            faq: {
+                title: "Preguntas Frecuentes | Vivir en España",
+                description: "Encuentre respuestas a preguntas comunes sobre visados, estudios, residencia y la vida en España.",
+                keywords: ["FAQ", "Preguntas", "Ayuda", "Guía"]
+            },
+            servicesOverview: {
+                title: "Nuestros Servicios | Apoyo Integral para Inmigración Española",
+                description: "Explore nuestra gama completa de servicios: Programas de estudio, Visados, Residencia, Turismo e Inversión en España.",
+                keywords: ["Servicios", "Inmigración", "Visa", "Estudio"]
+            },
+            otherServices: {
+                title: "Otros Servicios | Golden Visa e Inversión",
+                description: "Asistencia legal experta para Golden Visa, oportunidades de inversión y paquetes turísticos personalizados.",
+                keywords: ["Golden Visa", "Inversión", "Tours Personalizados"]
+            }
+        },
         header: {
             logo: "Khatwa",
             nav: {
@@ -2070,32 +2065,32 @@ export const content = {
                 {
                     title: "Khatwa - Tu primer paso",
                     subtitle: "La ruta más rápida hacia la residencia y el trabajo. Elige el camino técnico para una rápida cualificación para el mercado laboral europeo y residencia legal.",
-                    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage1
                 },
                 {
                     title: "Asistencia Integral de Visados",
                     subtitle: "Ayudamos a los clientes a obtener diversos visados españoles bajo la orientación de abogados de inmigración certificados, con apoyo completo desde el inicio hasta el establecimiento.",
-                    image: "https://plus.unsplash.com/premium_photo-1675367606828-5d2e9bcd5d80?q=80&w=1823&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage2
                 },
                 {
                     title: "Educación Profesional en España",
                     subtitle: "La ruta más rápida hacia la residencia y el trabajo. Elige el camino técnico para una rápida cualificación para el mercado laboral europeo y residencia legal.",
-                    image: "https://images.unsplash.com/photo-1758384891674-5c593bfd6d07?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage3
                 },
                 {
                     title: "Estudios de Posgrado Genuinos",
                     subtitle: "Con nuestras conexiones académicas con la Universidad de Vigo y centros de investigación como CINBIO, brindamos apoyo dedicado para solicitantes de Máster y Doctorado.",
-                    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1920&auto=format&fit=crop"
+                    image: heroImage4
                 },
                 {
                     title: "Soluciones de Inversión Integradas",
                     subtitle: "Ya sea que estés comprando propiedad o iniciando un negocio, te guiamos paso a paso a través de todos los procedimientos legales y administrativos.",
-                    image: "https://images.unsplash.com/photo-1642224016449-3c6afd7a563d?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage5
                 },
                 {
                     title: "Tours de Descubrimiento y Apoyo Personal",
                     subtitle: "Explora oportunidades con nuestros tours organizados y servicio de acompañamiento personal, apoyándote desde el momento en que llegas.",
-                    image: "https://images.unsplash.com/photo-1604624659831-c96ebed547cb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    image: heroImage6
                 }
             ],
             cta: "Descubre Nuestros Servicios",
@@ -2107,9 +2102,9 @@ export const content = {
         },
         about: {
             title: "Sobre Khatwa",
-            intro: "Khatwa, que significa 'paso' en árabe, fue fundada por el Dr. Abdelrahman Hamad, doctor por la Universidad de Vigo, España. Nos especializamos en facilitar vías de residencia, académicas y turísticas a España, respaldados por una sólida red de socios legales y académicos.",
+            intro: "Khatwa, que significa 'paso' en árabe, fue fundada por el Dr. Abdelrahman Geneidy, doctor por la Universidad de Vigo, España. Nos especializamos en facilitar vías de residencia, académicas y turísticas a España, respaldados por una sólida red de socios legales y académicos.",
             founderTitle: "Conoce al Fundador",
-            founderName: "Dr. Abdelrahman Hamad",
+            founderName: "Dr. Abdelrahman Geneidy",
             founderCredentials: "Doctor en Medicina Molecular",
             founderBio: "Con una profunda conexión personal y académica con España, el Dr. Abdelrahman fundó Khatwa para simplificar el complejo proceso de reubicación y establecimiento en el país. Su experiencia de primera mano como estudiante y residente internacional, combinada con su extensa red, proporciona a los clientes orientación y apoyo incomparables.",
             founderLinks: esFounderLinks,
@@ -2509,7 +2504,7 @@ export const content = {
             itineraries: [
                 {
                     title: "Programa 1: Noroeste de España + Oporto (Portugal)",
-                    image: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?q=80&w=2070&auto=format&fit=crop",
+                    image: programImage1,
                     points: [
                         "Vigo – Tour nocturno por la ciudad y el paseo marítimo.",
                         "Aguda e Islas Cíes – Paisajes naturales impresionantes.",
@@ -2522,7 +2517,7 @@ export const content = {
                 },
                 {
                     title: "Programa 2: Mezcla de España y Portugal",
-                    image: "https://i.pinimg.com/1200x/72/c4/71/72c47185c07547900bec96287627a839.jpg",
+                    image: programImage2,
                     points: [
                         "Vigo – Exploración de la ciudad.",
                         "Oporto – Río Duero y principales monumentos históricos.",
@@ -2534,7 +2529,7 @@ export const content = {
                 },
                 {
                     title: "Programa 3: Córdoba y Andalucía",
-                    image: "https://i.pinimg.com/1200x/cd/7e/e4/cd7ee43cac0a6990244f04e59f683afd.jpg",
+                    image: programImage3,
                     points: [
                         "Granada – Llegada y exploración del barrio antiguo.",
                         "Alhambra – Visita al Palacio de la Alhambra y Jardines del Generalife.",
@@ -2547,7 +2542,7 @@ export const content = {
                 },
                 {
                     title: "Programa 4: Barcelona + Madrid",
-                    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=2070&auto=format&fit=crop",
+                    image: programImage4,
                     points: [
                         "Barcelona – Paseo en barco por las Ramblas.",
                         "Barcelona – Sagrada Familia y Park Güell.",
@@ -2559,7 +2554,7 @@ export const content = {
                 },
                 {
                     title: "Programa 5: Suiza – Naturaleza y Montañas",
-                    image: "https://i.pinimg.com/1200x/66/41/9b/66419b41d040130bf1655289cbd091ac.jpg",
+                    image: programImage5,
                     points: [
                         "Zúrich – Llegada y tour por el casco antiguo.",
                         "Lucerna – Lago de Lucerna y Puente de la Capilla.",
@@ -2571,7 +2566,7 @@ export const content = {
                 },
                 {
                     title: "Programa 6: Francia – Países Bajos – Bélgica",
-                    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop",
+                    image: programImage6,
                     points: [
                         "París – Torre Eiffel y el río Sena.",
                         "París – Museo del Louvre y Catedral de Notre Dame.",

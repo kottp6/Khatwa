@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { FounderLink } from '../types';
 import { ArrowRight, X } from 'lucide-react';
-import profile from '../assets/profile.jpg';
+import profile from '../assets/profile.webp';
 import { motion, AnimatePresence } from 'framer-motion';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -88,13 +88,13 @@ const HomeAbout: React.FC<HomeAboutProps> = ({ content, onNavigate, language = '
               {/* Profile Card */}
               <motion.div
                 variants={itemVariants}
-                className="md:col-span-5 lg:col-span-4"
+                className="md:col-span-5 lg:col-span-5"
               >
                 <div className="relative group perspective-1000">
                   <motion.div
                     whileHover={{ scale: 1.02, rotateY: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
-                    className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 z-10"
+                    className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 z-10 "
                   >
                     {/* Card Header Background */}
                     <div className="h-24 bg-gradient-to-r from-[#0A2342] to-[#163a66]" />
@@ -143,7 +143,7 @@ const HomeAbout: React.FC<HomeAboutProps> = ({ content, onNavigate, language = '
               {/* Bio / Text Area */}
               <motion.div
                 variants={itemVariants}
-                className="md:col-span-7 lg:col-span-8"
+                className="md:col-span-7 lg:col-span-7"
               >
                 <div className="prose prose-lg prose-slate max-w-none">
                   <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center">

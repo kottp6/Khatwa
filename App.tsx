@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import HomeCards from './components/HomeCards';
 import HomeAbout from './components/HomeAbout';
 import About from './components/About';
 import StudyInSpain from './components/Services';
-import DigitalNomadVisa from './components/Packages';
 import Tourism from './components/Tourism';
 import OtherServices from './components/VisaDetails';
 import AllServices from './components/AllServices';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FAQ from './components/FAQ';
-import ProgramPage from './components/ProgramPage';
 import ScrollToTop from './components/ScrollToTop';
 import SplashScreen from './components/SplashScreen';
 import PageLoader from './components/PageLoader';
+import SEO from './components/SEO';
 import { content } from './constants';
 import type { Language, Page } from './types';
 
@@ -46,6 +46,24 @@ const App: React.FC = () => {
   };
 
   const currentContent = content[language];
+
+  // Mapping from Page (kebab-case) to metadata keys (camelCase)
+  const getSeoData = (page: Page) => {
+    const keyMap: Record<string, string> = {
+      'students-under-18': 'studentsUnder18',
+      'postgraduate-study': 'postgraduateStudy',
+      'digital-nomad': 'digitalNomad',
+      'non-lucrative': 'nonLucrative',
+      'family-reunification': 'familyReunification',
+      'services-overview': 'servicesOverview',
+      'other-services': 'otherServices'
+    };
+    const key = keyMap[page] || page;
+    // Fallback to home metadata if not found, though types ensure it should be there
+    return currentContent.metadata?.[key] || currentContent.metadata?.home;
+  };
+
+  const seoData = getSeoData(currentPage);
 
   const navigateToContact = () => {
     handlePageNavigation('contact');
@@ -89,6 +107,8 @@ const App: React.FC = () => {
         return <FAQ content={currentContent.faq} />;
       case 'contact':
         return <Contact content={currentContent.contactPage} />;
+      case 'other-services':
+        return <OtherServices content={currentContent.otherServices} />;
       default:
         // Fallback to home for any unknown page
         return (
@@ -108,7 +128,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <>
+    <HelmetProvider>
+      {seoData && <SEO data={seoData} lang={language} />}
+
       {/* Splash Screen */}
       <SplashScreen onLoadingComplete={() => setIsLoading(false)} />
 
@@ -132,7 +154,7 @@ const App: React.FC = () => {
           <ScrollToTop />
         </div>
       )}
-    </>
+    </HelmetProvider>
   );
 };
 
