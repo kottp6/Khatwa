@@ -2,8 +2,7 @@
 import React from 'react';
 import type { FounderLink, EducationStep, Package, OtherServiceItem, HomeCard, TourismPackage, Slide, SocialLink, ServiceOverviewCategory, FAQCategory, FeaturePoint, ServicePoint } from './types';
 // FIX: Imported missing icons from lucide-react to be used in the 'tourism' content.
-import { GraduationCap, BookUser, University, UserCheck, Briefcase, Plane, Wallet, Building, Laptop, Stamp, Facebook, Youtube, Instagram, Twitter, Linkedin, MessageCircle, HelpCircle, Scale, Home, Users, RefreshCw, UsersRound, Building2, Award, ShieldCheck, TrendingUp, Languages, FileCheck, School, Landmark, Target, Sailboat, Lightbulb, FileSignature, Gem, Sparkles, Car, Compass, ConciergeBell, Heart, Clock, Monitor, FileText } from 'lucide-react';
-import TiktokIcon from './components/TiktokIcon';
+import { GraduationCap, BookUser, University, UserCheck, Briefcase, Plane, Wallet, Building, Laptop, Stamp, Facebook, Youtube, Instagram, Twitter, Linkedin, MessageCircle, HelpCircle, Scale, Home, Users, RefreshCw, UsersRound, Building2, Award, ShieldCheck, TrendingUp, Languages, FileCheck, School, Landmark, Target, Sailboat, Lightbulb, FileSignature, Gem, Sparkles, Car, Compass, ConciergeBell, Heart, Clock, Monitor, FileText, Music } from 'lucide-react';
 
 
 const icons = {
@@ -23,7 +22,7 @@ const icons = {
     Twitter,
     Linkedin,
     WhatsApp: MessageCircle,
-    Tiktok: TiktokIcon,
+    Tiktok: Music,
     HelpCircle,
     Scale,
     Home,
