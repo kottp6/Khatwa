@@ -12,7 +12,7 @@ export const Logo: React.FC<LogoProps> = ({ theme = 'dark' }) => {
     const textColor = isDark ? 'text-[#0A2342]' : 'text-white';
 
     return (
-        <div className="flex items-center gap-4 group cursor-pointer select-none">
+        <div className="flex items-center gap-3 group cursor-pointer select-none">
             <div className="relative w-28 h-16 flex items-center justify-center">
                 <motion.svg
                     viewBox="-50 0 150 100"
