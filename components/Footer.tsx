@@ -9,6 +9,7 @@ interface FooterProps {
     contactTitle: string;
     address: string;
     phone: string;
+    displayPhone?: string;
     email: string;
     legalTitle: string;
     legalText: string;
@@ -39,7 +40,7 @@ const Footer: React.FC<FooterProps> = ({ content }) => {
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="me-3" />
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#D9B44A]">{content.phone}</a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#D9B44A]">{content.displayPhone || content.phone}</a>
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="me-3" />

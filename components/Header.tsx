@@ -72,10 +72,6 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage, content, current
     'non-lucrative',
     'family-reunification',
     'tourism',
-    'general-tourism',
-    'smart-tourism-directed',
-    'smart-tourism-visa-pathway',
-    'smart-tourism-vip',
   ];
 
   const hasHero = pagesWithHero.includes(currentPage);
@@ -91,9 +87,9 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage, content, current
   }, []);
 
   const languageOptions = [
-    { code: 'en' as Language, name: 'English', flag: '🇬🇧' },
-    { code: 'ar' as Language, name: 'العربية', flag: '🇸🇦' },
-    { code: 'es' as Language, name: 'Español', flag: '🇪🇸' },
+    { code: 'en' as Language, name: 'English', flag: 'EN' },
+    { code: 'ar' as Language, name: 'العربية', flag: 'AR' },
+    { code: 'es' as Language, name: 'Español', flag: 'ES' },
   ];
 
   const currentLanguage = languageOptions.find(lang => lang.code === language) || languageOptions[0];
@@ -127,10 +123,6 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage, content, current
     nonLucrative: 'non-lucrative',
     familyReunification: 'family-reunification',
     tourism: 'tourism',
-    generalTourism: 'general-tourism',
-    smartTourismDirected: 'smart-tourism-directed',
-    smartTourismVisaPathway: 'smart-tourism-visa-pathway',
-    smartTourismVip: 'smart-tourism-vip',
     servicesOverview: 'services-overview',
   };
 
@@ -374,9 +366,9 @@ const Header: React.FC<HeaderProps> = ({ language, setLanguage, content, current
             </button>
           </nav>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center gap-6">
             {/* Social Media Icons */}
-            <div className="hidden lg:flex items-center gap-4 border-r pr-6 border-slate-200">
+            <div className={`hidden lg:flex items-center gap-4 ${language === 'ar' ? 'border-l pl-6' : 'border-r pr-6'} border-slate-200`}>
               {socialLinks.map((item) => {
                 const Icon = item.icon;
                 return (

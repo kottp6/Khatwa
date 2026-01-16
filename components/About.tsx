@@ -256,7 +256,7 @@ const About: React.FC<AboutProps> = ({ content }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[1000] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6"
+            className="fixed inset-0 z-[1000] bg-black/95 backdrop-blur-xl flex items-center justify-center"
             onClick={() => setIsImageOpen(false)}
           >
             <motion.div
@@ -264,18 +264,18 @@ const About: React.FC<AboutProps> = ({ content }) => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-2xl w-full"
+              className="relative w-full h-full max-w-7xl max-h-screen p-4 flex items-center justify-center"
             >
               <button
                 onClick={() => setIsImageOpen(false)}
-                className="absolute -top-16 right-0 text-white hover:text-[#D9B44A] transition-colors p-2"
+                className="absolute top-8 right-8 z-50 text-white/50 hover:text-white transition-colors bg-black/50 hover:bg-black/80 rounded-full p-2"
               >
                 <X size={40} />
               </button>
               <img
                 src={profile}
                 alt={content.founderName}
-                className="w-full h-auto rounded-3xl shadow-2xl border-2 border-white/10"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
               />
             </motion.div>
           </motion.div>

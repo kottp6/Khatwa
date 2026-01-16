@@ -1,7 +1,7 @@
 import React from 'react';
 import type { EducationStep, FeaturePoint, Page, ServicePoint } from '../types';
-import { AlertCircle, FileText, CheckCircle, ArrowRight, Target, Plane, Building2 } from 'lucide-react';
-import { motion } from 'framer-motion'
+import { AlertCircle, FileText, CheckCircle, ArrowRight, Target, Plane, Building2, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface Audience {
     icon: React.ElementType;
@@ -100,6 +100,7 @@ const TimelineStep: React.FC<{ step: EducationStep, index: number, langDir: stri
 
 
 const StudyInSpain: React.FC<StudyInSpainProps> = ({ content, setCurrentPage }) => {
+    const [isModalOpen, setIsModalOpen] = React.useState(false);
     const langDir = document.documentElement.dir;
 
     const supportPhases = [
@@ -196,11 +197,21 @@ const StudyInSpain: React.FC<StudyInSpainProps> = ({ content, setCurrentPage }) 
                                     }}
                                     className="relative z-10"
                                 >
-                                    <img
-                                        src={content.systemImage}
-                                        alt={content.systemTitle}
-                                        className="w-full h-auto rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
-                                    />
+                                    <div
+                                        className="relative group/image cursor-pointer"
+                                        onClick={() => setIsModalOpen(true)}
+                                    >
+                                        <img
+                                            src={content.systemImage}
+                                            alt={content.systemTitle}
+                                            className="w-full h-auto rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02] border-4 border-white"
+                                        />
+
+                                        {/* View Photo Overlay */}
+                                        <div className="absolute inset-0 bg-[#0A2342]/40 rounded-2xl opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 backdrop-blur-[2px]">
+                                            <span className="text-white text-sm font-bold tracking-widest uppercase">View Photo</span>
+                                        </div>
+                                    </div>
 
                                     {/* Glass Shine Effect */}
                                     <motion.div
@@ -461,6 +472,39 @@ const StudyInSpain: React.FC<StudyInSpainProps> = ({ content, setCurrentPage }) 
                     </div>
                 </div>
             </section>
+
+            {/* --- Image Modal --- */}
+            <AnimatePresence>
+                {isModalOpen && content.systemImage && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setIsModalOpen(false)}
+                        className="fixed inset-0 z-[1000] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="relative max-w-5xl w-full"
+                        >
+                            <button
+                                onClick={() => setIsModalOpen(false)}
+                                className="absolute -top-16 right-0 text-white hover:text-[#D9B44A] transition-colors p-2"
+                            >
+                                <X size={40} />
+                            </button>
+                            <img
+                                src={content.systemImage}
+                                alt={content.systemTitle}
+                                className="w-full h-auto rounded-3xl shadow-2xl border-2 border-white/10"
+                            />
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
         </div>
     )

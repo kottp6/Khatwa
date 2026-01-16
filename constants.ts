@@ -67,9 +67,9 @@ const icons = {
 };
 
 const enFounderLinks: FounderLink[] = [
-    { icon: icons.GraduationCap, text: "University of Vigo Thesis", url: "https://cinbio.es/en/dissemination/events/teses-cinbio-abdelrahman-hamdeldein-geneidy-aly/" }
+    { icon: icons.GraduationCap, text: "Founder’s profile on the University of Vigo website", url: "https://cinbio.es/en/dissemination/events/teses-cinbio-abdelrahman-hamdeldein-geneidy-aly/" }
     ,
-    { icon: icons.BookUser, text: "Google Scholar Profile", url: "https://scholar.google.com/citations?user=5KC01o8AAAAJ&hl=en" },
+    { icon: icons.BookUser, text: "Founder’s profile on Google Scholar", url: "https://scholar.google.com/citations?user=5KC01o8AAAAJ&hl=en" },
 ];
 
 const arFounderLinks: FounderLink[] = [
@@ -78,8 +78,8 @@ const arFounderLinks: FounderLink[] = [
 ];
 
 const esFounderLinks: FounderLink[] = [
-    { icon: icons.GraduationCap, text: "Tesis de la Universidad de Vigo", url: "https://cinbio.es/en/dissemination/events/teses-cinbio-abdelrahman-hamdeldein-geneidy-aly/" },
-    { icon: icons.BookUser, text: "Perfil de Google Scholar", url: "https://scholar.google.com/citations?user=5KC01o8AAAAJ&hl=en" }
+    { icon: icons.GraduationCap, text: "Perfil del fundador en el sitio web de la Universidad de Vigo", url: "https://cinbio.es/en/dissemination/events/teses-cinbio-abdelrahman-hamdeldein-geneidy-aly/" },
+    { icon: icons.BookUser, text: "Perfil del fundador en Google Scholar", url: "https://scholar.google.com/citations?user=5KC01o8AAAAJ&hl=en" }
 ];
 
 const socialLinks: SocialLink[] = [
@@ -344,7 +344,7 @@ const enServicesOverviewCategories: ServiceOverviewCategory[] = [
         ]
     },
     {
-        title: "Residency & Visas",
+        title: "Residency | Investment | Visas",
         items: [
             { title: "Digital Nomad Visa", description: "Live and work remotely from Spain with our end-to-end visa and settlement support.", page: "digital-nomad" },
             { title: "Non-Lucrative Visa", description: "Settle in Spain without professional activities, ideal for those with passive income or savings.", page: "non-lucrative" },
@@ -672,7 +672,7 @@ const enStudyInSpainContent: {
     phase1Title: "Phase 1: Seamless Preparation",
     phase2Title: "Phase 2: Supported Arrival",
     phase3Title: "Phase 3: Full Integration",
-    readMoreInfo: "Read More Information"
+    readMoreInfo: "For More Information"
 };
 
 const arStudyInSpainContent: typeof enStudyInSpainContent = {
@@ -726,7 +726,7 @@ const arStudyInSpainContent: typeof enStudyInSpainContent = {
     phase1Title: "المرحلة الأولى: الإعداد السلس",
     phase2Title: "المرحلة الثانية: الوصول المدعوم",
     phase3Title: "المرحلة الثالثة: الاندماج الكامل",
-    readMoreInfo: "اقرأ المزيد من المعلومات"
+    readMoreInfo: "للمزيد من المعلومات"
 };
 
 
@@ -740,8 +740,8 @@ export const content = {
             },
             about: {
                 title: "About Khatwa | Trusted Spanish Immigration Consultants",
-                description: "Learn about Khatwa's mission to bridge the gap between you and your dreams in Spain. Founded by Dr. Abdelrahman Geneidy.",
-                keywords: ["About Us", "Team", "Mission", "Dr. Abdelrahman Geneidy"]
+                description: "Learn about Khatwa's mission to bridge the gap between you and your dreams in Spain. Founded by Dr. Abdelrahman Hamad.",
+                keywords: ["About Us", "Team", "Mission", "Dr. Abdelrahman Hamad"]
             },
             study: {
                 title: "Vocational Training in Spain | Guaranteed Admission & Internships",
@@ -820,7 +820,7 @@ export const content = {
                             }
                         },
                         {
-                            title: "Residency & Visas",
+                            title: "Residency | Investment | Visas",
                             items: {
                                 digitalNomad: "Digital Nomad Visa",
                                 nonLucrative: "Non-Lucrative Visa",
@@ -844,7 +844,7 @@ export const content = {
             slides: [
                 {
                     title: "Khatwa - Your first step",
-                    subtitle: "The fastest route to residency and work. Choose the technical path for rapid qualification for the European job market and legal residency.",
+                    subtitle: "A step toward a better future through the fastest route to European residency and work.",
                     image: heroImage1
                 },
                 {
@@ -863,12 +863,12 @@ export const content = {
                     image: heroImage4
                 },
                 {
-                    title: "Integrated Investment Solutions",
+                    title: "Integrated Investment Solution",
                     subtitle: "Whether you're buying property or starting a business, we guide you step-by-step through all legal and administrative procedures.",
                     image: heroImage5
                 },
                 {
-                    title: "Discovery Tours & Personal Support",
+                    title: "Discovery Tours & Personal       Support",
                     subtitle: "Explore opportunities with our organized tours and personal accompaniment service, supporting you from the moment you arrive.",
                     image: heroImage6
                 }
@@ -882,10 +882,10 @@ export const content = {
         },
         about: {
             title: "About Khatwa",
-            intro: "Khatwa, meaning 'step' in Arabic, was founded by Dr. Abdelrahman Geneidy, a PhD holder from the University of Vigo, Spain. We specialize in facilitating residency, academic, and tourism pathways to Spain, backed by a robust network of legal and academic partners.",
+            intro: "Khatwa — meaning “step” in Arabic — was founded by Dr. Abdelrahman Hamad, a Spanish national and PhD holder from the University of Vigo. We provide structured pathways to residency, education, and tourism in Spain, in collaboration with accredited legal and academic partners.",
             founderTitle: "Meet the Founder",
-            founderName: "Dr. Abdelrahman Geneidy",
-            founderCredentials: "PhD in Molecular Medicine",
+            founderName: "Dr. Abdelrahman Hamad",
+            founderCredentials: "Ph.D. in Materials Science and Nanotechnology – University of Vigo",
             founderBio: "With a deep personal and academic connection to Spain, Dr. Abdelrahman founded Khatwa to simplify the complex process of relocating and settling in the country. His firsthand experience as an international student and resident, combined with his extensive network, provides clients with unparalleled guidance and support.",
             founderLinks: enFounderLinks,
             ourVisionary: "Our Visionary",
@@ -962,18 +962,18 @@ export const content = {
                 "Two recent photos with a white background.",
                 "Preliminary flight and housing bookings."
             ],
-            programRefundTitle: "Pricing and Payment",
-            programRefund: "Total: 8,000€ + IVA (21%) = 9,600€ (Includes admission, equivalency, guardianship contract, legal translations/apostille, full-year supervision, and monthly reports).\nPayment: 1,500€ upon contract signing; balance after official acceptance.\nRefund: If visa is refused, full refund minus 500€ for administrative and legal fees.",
+            programRefundTitle: "Payment Information",
+            programRefund: "Please contact us for detailed pricing and payment information.",
             readyForJourneyTitle: "Get Ready for Your Child's Journey",
             phase1Title: "Phase 1: Seamless Preparation",
             phase2Title: "Phase 2: Supported Arrival",
             phase3Title: "Phase 3: Full Integration",
-            readMoreInfo: "Read More Information"
+            readMoreInfo: "For More Information"
         },
         postgraduateStudy: {
             id: "postgraduate-study",
             pageTitle: "Master's and PhD Program",
-            intro: "Khatwa offers an elite opportunity for students to pursue Master's or PhD degrees in Spain. Our deep partnerships with the University of Vigo, CINBIO research center, and top technical institutes ensure direct access to officially recognized programs across diverse academic fields.",
+            intro: "Khatwa provides guidance for students interested in pursuing Master's or PhD degrees in Spain. Our professional network, including collaborations with the University of Vigo, CINBIO research center, and recognized technical institutes, helps students navigate officially accredited programs in various academic fields.",
             whyTitle: "Program Benefits",
             whyPoints: [
                 { icon: icons.GraduationCap, title: "Post-Study Residence", description: "After completion, students are eligible for a 1-year job search residency, convertible to a full work permit." },
@@ -1016,13 +1016,13 @@ export const content = {
                 "Two recent photos with a white background.",
                 "Proof of preliminary flight and housing bookings."
             ],
-            programRefundTitle: "Pricing and Payment",
-            programRefund: "Total: 6,000€ + IVA (21%) = 7,300€ (Includes all administrative and legal services in Spain; tuition fees are determined separately by specialization).\nPayment: 1,500€ upon contract signing; balance after official admission.\nRefund: If visa is refused, lawyer files free appeal; if final refusal, full refund minus 500€ for administrative and legal fees.",
+            programRefundTitle: "Payment Information",
+            programRefund: "Please contact us for detailed pricing and payment information.",
             readyForJourneyTitle: "Start Your Academic Career in Spain",
             phase1Title: "Phase 1: Seamless Preparation",
             phase2Title: "Phase 2: Supported Arrival",
             phase3Title: "Phase 3: Full Integration",
-            readMoreInfo: "Read More Information"
+            readMoreInfo: "For More Information"
         },
         tourism: {
             id: "tourism",
@@ -1113,35 +1113,28 @@ export const content = {
                     description: "Perfect for families and individuals focused on pure leisure, culture, and relaxation.",
                     focus: "Sightseeing & Leisure",
                     uniqueFeatures: ["Iconic landmark visits", "Authentic gastronomy", "Historical excursions"],
-                    priceHint: "Standard Rates"
+                    priceHint: "Contact for Pricing"
                 },
                 {
                     name: "Smart Tourism (Directed)",
                     description: "Designed for those exploring Spanish educational and professional opportunities.",
                     focus: "Academic Scouting",
                     uniqueFeatures: ["Guided campus visits", "Admission counseling", "Professional networking"],
-                    priceHint: "Education Package"
+                    priceHint: "Contact for Pricing"
                 },
                 {
                     name: "Smart Tourism (Visa Pathway)",
                     description: "High-end travel combined with preliminary legal steps for residency.",
                     focus: "Residency Preparation",
                     uniqueFeatures: ["Preliminary legal profiling", "Relocation area scouting", "Document verification"],
-                    priceHint: "Includes Legal Credit"
+                    priceHint: "Contact for Pricing"
                 },
                 {
                     name: "VIP Tourism (Visa Pathway)",
                     description: "The ultimate luxury strategy overseen by experts for high-net-worth individuals.",
                     focus: "Elite Relocation",
                     uniqueFeatures: ["5-star luxury hotels", "Private strategy with Dr. Abdelrahman", "Exclusive investment access"],
-                    priceHint: "Premium Rates"
-                },
-                {
-                    name: "Smart Tourism (Investment)",
-                    description: "Focused on identifying property and business opportunities in the Spanish market.",
-                    focus: "Business & Real Estate",
-                    uniqueFeatures: ["Property viewing tours", "Market analysis sessions", "Golden Visa orientation"],
-                    priceHint: "Investment Desk Rates"
+                    priceHint: "Contact for Pricing"
                 }
             ],
             ctaBlock: {
@@ -1194,13 +1187,13 @@ export const content = {
                 "Valid passport.",
                 "Comprehensive health insurance."
             ],
-            programRefundTitle: "Payment & Consultation",
-            programRefund: "We accept payments via bank transfer. Contact us for a free initial consultation to assess your eligibility.",
+            programRefundTitle: "Payment Information",
+            programRefund: "Please contact us for detailed pricing and payment information.",
             readyForJourneyTitle: "Get Ready for Your Digital Nomad Journey",
             phase1Title: "Phase 1: Seamless Preparation",
             phase2Title: "Phase 2: Supported Arrival",
             phase3Title: "Phase 3: Full Integration",
-            readMoreInfo: "Read More Information"
+            readMoreInfo: "For More Information"
         },
         nonLucrative: {
             id: "non-lucrative",
@@ -1246,13 +1239,13 @@ export const content = {
                 "Proof of accommodation in Spain (rental contract or property deed).",
                 "Passport valid for at least one year."
             ],
-            programRefundTitle: "Price and Payment",
-            programRefund: "Total: 7,500€ + IVA (21%) = 9,300€ (includes all services, procedures, and administrative fees in Spain).\nPayment: 50% upon contract signing.\nRefund: If visa refused, deduct 500€ for legal/admin costs; refund rest within 15 working days.",
+            programRefundTitle: "Payment Information",
+            programRefund: "Please contact us for detailed pricing and payment information.",
             readyForJourneyTitle: "Get Ready for Your New Life in Spain",
             phase1Title: "Phase 1: Seamless Preparation",
             phase2Title: "Phase 2: Supported Arrival",
             phase3Title: "Phase 3: Full Integration",
-            readMoreInfo: "Read More Information"
+            readMoreInfo: "For More Information"
         },
         familyReunification: {
             id: "family-reunification",
@@ -1300,13 +1293,13 @@ export const content = {
                 "Health insurance or proof of health coverage for the applicant or family members.",
                 "Clean criminal record for the applicant."
             ],
-            programRefundTitle: "Price and Payment",
-            programRefund: "Total: 3,500€ + IVA (21%) = 4,200€ (includes all services, procedures, and administrative fees in Spain).\nPayment: 50% upon contract signing.\nRefund: If visa refused, deduct 500€ for legal/admin costs; refund rest within 15 working days.",
+            programRefundTitle: "Payment Information",
+            programRefund: "Please contact us for detailed pricing and payment information.",
             readyForJourneyTitle: "Get Ready to Reunite Your Family",
             phase1Title: "Phase 1: Seamless Preparation",
             phase2Title: "Phase 2: Supported Arrival",
             phase3Title: "Phase 3: Full Integration",
-            readMoreInfo: "Read More Information"
+            readMoreInfo: "For More Information"
         },
         otherServices: {
             id: "other-services",
@@ -1337,7 +1330,7 @@ export const content = {
             phone: "+34 610 99 29 38",
             email: "khatwa.es@gmail.com",
             legalTitle: "Legal Information",
-            legalText: "Khatwa A professional consultancy establishment operated by Dr. Abdelrahman Geneidy, registered in Spain.",
+            legalText: "Khatwa A professional consultancy establishment operated by Dr. Abdelrahman Hamad, registered in Spain.",
             followTitle: "Follow Us",
             socialLinks: socialLinks,
             copyright: "© 2026 Khatwa. All rights reserved."
@@ -1489,10 +1482,10 @@ export const content = {
         },
         about: {
             title: "عن خطوة",
-            intro: "خطوة، التي أسسها الدكتور عبد الرحمن علي، الحاصل على درجة الدكتوراه من جامعة فيغو بإسبانيا. نحن متخصصون في تسهيل مسارات الإقامة والدراسة والسياحة إلى إسبانيا، مدعومين بشبكة قوية من الشركاء القانونيين والأكاديميين.",
+            intro: "خطوة — وتعني “Step” باللغة العربية — تأسست على يد الدكتور عبد الرحمن حمد، وهو مواطن إسباني وحاصل على درجة الدكتوراه من جامعة فيغو. نقدم مسارات منظمة للإقامة والتعليم والسياحة في إسبانيا، وذلك بالتعاون مع شركاء قانونيين وأكاديميين معتمدين..",
             founderTitle: "تعرف على المؤسس",
-            founderName: "د. عبد الرحمن حمدالدين",
-            founderCredentials: "دكتوراه في النانو تكنولوجي",
+            founderName: "د. عبد الرحمن حمد",
+            founderCredentials: "دكتوراه في النانو تكنولوجي علوم المواد وتكنولوجيا النانو الكيمياء الفيزيائيه جامعه فيجوو اسبانيا",
             founderBio: "بفضل ارتباطه الشخصي والأكاديمي العميق بإسبانيا، أسس الدكتور عبد الرحمن 'خطوة' لتبسيط العملية المعقدة للانتقال والاستقرار في البلاد. خبرته المباشرة كطالب ومقيم دولي، بالإضافة إلى شبكته الواسعة، تزود العملاء بإرشادات ودعم لا مثيل لهما.",
             founderLinks: arFounderLinks,
             ourVisionary: "صاحب الرؤية",
@@ -1569,13 +1562,13 @@ export const content = {
                 "صورتان شخصيتان بخلفية بيضاء.",
                 "حجز مبدئي للطيران والسكن."
             ],
-            programRefundTitle: "السعر وسياسة الدفع",
-            programRefund: "الإجمالي: 8,000 يورو + ضريبة القيمة المضافة (21%) = 9,600 يورو (تشمل القبول، المعادلة، عقد الوصاية، الترجمة والتوثيق، وإشراف قانوني كامل لمدة سنة).\nالدفع: 1,500 يورو عند توقيع العقد؛ والباقي بعد الحصول على القبول الرسمي.\nالاسترداد: في حال رفض التأشيرة، يُرد المبلغ كاملاً مخصوماً منه 500 يورو للمصاريف الإدارية والقانونية.",
+            programRefundTitle: "معلومات الدفع",
+            programRefund: "يرجى التواصل معنا للحصول على تفاصيل الأسعار والدفع.",
             readyForJourneyTitle: "استعد لرحلة طفلك التعليمية",
             phase1Title: "المرحلة الأولى: الإعداد السلس",
             phase2Title: "المرحلة الثانية: الوصول المدعوم",
             phase3Title: "المرحلة الثالثة: الاندماج الكامل",
-            readMoreInfo: "اقرأ المزيد من المعلومات"
+            readMoreInfo: "للمزيد من المعلومات"
         },
         postgraduateStudy: {
             id: "postgraduate-study",
@@ -1623,13 +1616,13 @@ export const content = {
                 "صورتان شخصيتان بخلفية بيضاء.",
                 "حجز مبدئي للطيران والسكن."
             ],
-            programRefundTitle: "السعر وسياسة الدفع",
-            programRefund: "الإجمالي: 6,000 يورو + ضريبة القيمة المضافة (21%) = 7,300 يورو (تشمل جميع الخدمات القانونية والإدارية؛ الرسوم الدراسية تحدد حسب التخصص).\nالدفع: 1,500 يورو عند توقيع العقد؛ والباقي بعد الحصول على القبول.\nالاسترداد: في حال رفض التأشيرة، يقدم المحامي استئنافاً مجانياً؛ وفي حال الرفض النهائي، يُرد المبلغ مخصوماً منه 500 يورو.",
+            programRefundTitle: "معلومات الدفع",
+            programRefund: "يرجى التواصل معنا للحصول على تفاصيل الأسعار والدفع.",
             readyForJourneyTitle: "ابدأ مسارك الأكاديمي في إسبانيا",
             phase1Title: "المرحلة الأولى: الإعداد السلس",
             phase2Title: "المرحلة الثانية: الوصول المدعوم",
             phase3Title: "المرحلة الثالثة: الاندماج الكامل",
-            readMoreInfo: "اقرأ المزيد من المعلومات"
+            readMoreInfo: "للمزيد من المعلومات"
         },
         tourism: {
             id: "tourism",
@@ -1720,35 +1713,35 @@ export const content = {
                     description: "مثالية للعائلات والأفراد الذين يركزون على الترفيه الخالص والثقافة والاسترخاء.",
                     focus: "المشاهدة والترفيه",
                     uniqueFeatures: ["زيارة المعالم الشهيرة", "فن الطهي الأصيل", "رحلات تاريخية"],
-                    priceHint: "أسعار قياسية"
+                    priceHint: "تواصل معنا للسعر"
                 },
                 {
                     name: "السياحة الذكية (الموجه)",
                     description: "مصممة لمن يستكشفون الفرص التعليمية والمهنية في إسبانيا.",
                     focus: "الاستكشاف الأكاديمي",
                     uniqueFeatures: ["زيارات جامعية موجهة", "استشارات القبول", "تواصل مهني"],
-                    priceHint: "باقة التعليم"
+                    priceHint: "تواصل معنا للسعر"
                 },
                 {
                     name: "السياحة الذكية (مسار الإقامة)",
                     description: "سفر راقٍ مدمج مع الخطوات القانونية الأولية للإقامة.",
                     focus: "إعداد الإقامة",
                     uniqueFeatures: ["تحديد الملف القانوني الأولي", "استكشاف مناطق الاستقرار", "التحقق من المستندات"],
-                    priceHint: "تشمل رصيداً قانونياً"
+                    priceHint: "تواصل معنا للسعر"
                 },
                 {
                     name: "السياحة الفاخرة (مسار الإقامة)",
                     description: "الاستراتيجية الفاخرة النهائية تحت إشراف الخبراء لأصحاب الثروات العالية.",
                     focus: "استقرار النخبة",
                     uniqueFeatures: ["فنادق فاخرة 5 نجوم", "استراتيجية خاصة مع د. عبد الرحمن", "وصول حصري للاستثمار"],
-                    priceHint: "أسعار مميزة"
+                    priceHint: "تواصل معنا للسعر"
                 },
                 {
                     name: "السياحة الذكية (الاستثمار)",
                     description: "تركز على تحديد الفرص العقارية والتجارية في السوق الإسباني.",
                     focus: "الأعمال والعقارات",
                     uniqueFeatures: ["جولات معاينة العقارات", "جلسات تحليل السوق", "توجيه الفيزا الذهبية"],
-                    priceHint: "أسعار مكتب الاستثمار"
+                    priceHint: "تواصل معنا للسعر"
                 }
             ],
             ctaBlock: {
@@ -1802,13 +1795,13 @@ export const content = {
                 "التأمين الصحي الإسباني الكامل بدون خصومات.",
                 "صورة من جواز السفر (جميع الصفحات المختومة)."
             ],
-            programRefundTitle: "الدفع والاستشارة",
-            programRefund: "نقبل الدفع عن طريق التحويل البنكي. تواصل معنا للحصول على استشارة أولية مجانية لتقييم أهليتك.",
+            programRefundTitle: "معلومات الدفع",
+            programRefund: "يرجى التواصل معنا للحصول على تفاصيل الأسعار والدفع.",
             readyForJourneyTitle: "استعد لرحلة النوماد الرقمي",
             phase1Title: "المرحلة الأولى: الإعداد السلس",
             phase2Title: "المرحلة الثانية: الوصول المدعوم",
             phase3Title: "المرحلة الثالثة: الاندماج الكامل",
-            readMoreInfo: "اقرأ المزيد من المعلومات"
+            readMoreInfo: "للمزيد من المعلومات"
         },
         nonLucrative: {
             id: "non-lucrative",
@@ -1854,13 +1847,13 @@ export const content = {
                 "إثبات سكن في إسبانيا (عقد إيجار أو ملكية).",
                 "جواز سفر ساري لمدة لا تقل عن سنة."
             ],
-            programRefundTitle: "السعر وسياسة الدفع",
-            programRefund: "الإجمالي: 7,500 يورو + ضريبة القيمة المضافة (21%) = 9,300 يورو (تشمل جميع الخدمات والإجراءات والرسوم الإدارية في إسبانيا).\nالدفع: 50% عند توقيع العقد.\nالاسترداد: في حال رفض التأشيرة، يتم خصم 500 يورو للتكاليف القانونية والإدارية؛ ويُرد الباقي خلال 15 يوم عمل.",
+            programRefundTitle: "معلومات الدفع",
+            programRefund: "يرجى التواصل معنا للحصول على تفاصيل الأسعار والدفع.",
             readyForJourneyTitle: "استعد لحياتك الجديدة في إسبانيا",
             phase1Title: "المرحلة الأولى: الإعداد السلس",
             phase2Title: "المرحلة الثانية: الوصول المدعوم",
             phase3Title: "المرحلة الثالثة: الاندماج الكامل",
-            readMoreInfo: "اقرأ المزيد من المعلومات"
+            readMoreInfo: "للمزيد من المعلومات"
         },
         familyReunification: {
             id: "family-reunification",
@@ -1908,13 +1901,13 @@ export const content = {
                 "تأمين صحي أو إثبات تغطية صحية للمتقدم أو أفراد العائلة.",
                 "سجل جنائي نظيف للمتقدم."
             ],
-            programRefundTitle: "السعر وسياسة الدفع",
-            programRefund: "الإجمالي: 3,500 يورو + ضريبة القيمة المضافة (21%) = 4,200 يورو (تشمل جميع الخدمات والإجراءات والرسوم الإدارية في إسبانيا).\nالدفع: 50% عند توقيع العقد.\nالاسترداد: في حال رفض التأشيرة، يتم خصم 500 يورو للتكاليف القانونية والإدارية؛ ويُرد الباقي خلال 15 يوم عمل.",
+            programRefundTitle: "معلومات الدفع",
+            programRefund: "يرجى التواصل معنا للحصول على تفاصيل الأسعار والدفع.",
             readyForJourneyTitle: "استعد للمّ شمل عائلتك",
             phase1Title: "المرحلة الأولى: الإعداد السلس",
             phase2Title: "المرحلة الثانية: الوصول المدعوم",
             phase3Title: "المرحلة الثالثة: الاندماج الكامل",
-            readMoreInfo: "اقرأ المزيد من المعلومات"
+            readMoreInfo: "للمزيد من المعلومات"
         },
         otherServices: {
             id: "other-services",
@@ -1943,9 +1936,10 @@ export const content = {
             contactTitle: "تواصل معنا",
             address: "فيغو، بونتيفيدرا، إسبانيا",
             phone: "+34 610 99 29 38",
+            displayPhone: "+٣٤ ٦١٠ ٩٩ ٢٩ ٣٨",
             email: "khatwa.es@gmail.com",
             legalTitle: "معلومات قانونية",
-            legalText: "خطوة مسجلة رسميًا في إسبانيا، وتلتزم بجميع اللوائح المحلية ولوائح الاتحاد الأوروبي لتقديم الخدمات التعليمية وخدمات الإقامة.",
+            legalText: "خطوة هي مؤسسة استشارية مهنية يديرها الدكتور عبد الرحمن حمد، ومسجلة رسميًا في إسبانيا.",
             followTitle: "تابعنا",
             socialLinks: socialLinks,
             copyright: "© 2026 خطوة. جميع الحقوق محفوظة."
@@ -1960,8 +1954,8 @@ export const content = {
             },
             about: {
                 title: "Sobre Khatwa | Consultores de Inmigración Española de Confianza",
-                description: "Conozca la misión de Khatwa de cerrar la brecha entre usted y sus sueños en España. Fundada por el Dr. Abdelrahman Geneidy.",
-                keywords: ["Sobre Nosotros", "Equipo", "Misión", "Dr. Abdelrahman Geneidy"]
+                description: "Conozca la misión de Khatwa de cerrar la brecha entre usted y sus sueños en España. Fundada por el Dr. Abdelrahman Hamad.",
+                keywords: ["Sobre Nosotros", "Equipo", "Misión", "Dr. Abdelrahman Hamad"]
             },
             study: {
                 title: "Formación Profesional en España | Admisión Garantizada y Prácticas",
@@ -2064,7 +2058,7 @@ export const content = {
             slides: [
                 {
                     title: "Khatwa - Tu primer paso",
-                    subtitle: "La ruta más rápida hacia la residencia y el trabajo. Elige el camino técnico para una rápida cualificación para el mercado laboral europeo y residencia legal.",
+                    subtitle: "Un paso hacia un futuro mejor a través de la vía más rápida para la residencia y el trabajo en Europa.",
                     image: heroImage1
                 },
                 {
@@ -2102,15 +2096,15 @@ export const content = {
         },
         about: {
             title: "Sobre Khatwa",
-            intro: "Khatwa, que significa 'paso' en árabe, fue fundada por el Dr. Abdelrahman Geneidy, doctor por la Universidad de Vigo, España. Nos especializamos en facilitar vías de residencia, académicas y turísticas a España, respaldados por una sólida red de socios legales y académicos.",
+            intro: "Khatwa, que significa “paso” en árabe, fue fundada por el Dr. Abdelrahman Hamad, ciudadano español y doctor por la Universidad de Vigo. Ofrecemos itinerarios estructurados para la residencia, la educación y el turismo en España, en colaboración con socios legales y académicos acreditados.",
             founderTitle: "Conoce al Fundador",
-            founderName: "Dr. Abdelrahman Geneidy",
-            founderCredentials: "Doctor en Medicina Molecular",
+            founderName: "Dr. Abdelrahman Hamad",
+            founderCredentials: "PhD in Nanotechnology, Materials Science, and Physical Chemistry, obtained from the University of Vigo, Spain.",
             founderBio: "Con una profunda conexión personal y académica con España, el Dr. Abdelrahman fundó Khatwa para simplificar el complejo proceso de reubicación y establecimiento en el país. Su experiencia de primera mano como estudiante y residente internacional, combinada con su extensa red, proporciona a los clientes orientación y apoyo incomparables.",
             founderLinks: esFounderLinks,
             ourVisionary: "Nuestro Visionario",
             values: ["Innovación", "Comunidad", "Excelencia", "Crecimiento"],
-            readMore: "Leer Más Sobre Nosotros",
+            readMore: "Para más información",
             partnersTitle: "Nuestra Red y Socios",
             partnersIntro: "Nuestra fortaleza radica en nuestras colaboraciones oficiales. Trabajamos directamente con:",
             partnersList: [
@@ -2225,7 +2219,7 @@ export const content = {
             phase1Title: "Fase 1: Preparación Sin Problemas",
             phase2Title: "Fase 2: Llegada con Apoyo",
             phase3Title: "Fase 3: Integración Completa",
-            readMoreInfo: "Leer Más Información"
+            readMoreInfo: "Para más información"
         },
         studentsUnder18: {
             id: "students-under-18",
@@ -2275,13 +2269,13 @@ export const content = {
                 "Dos fotos recientes con fondo blanco.",
                 "Reservas preliminares de vuelo y vivienda."
             ],
-            programRefundTitle: "Precio y Pago",
-            programRefund: "Total: 8.000 € + IVA (21%) = 9.600 € (Incluye admisión, equivalencia, contrato de tutela, traducciones/apostilla legales, supervisión de año completo e informes mensuales).\nPago: 1.500 € a la firma del contrato; saldo tras la aceptación oficial.\nReembolso: Si se deniega la visa, reembolso total menos 500 € por gastos administrativos y legales.",
+            programRefundTitle: "Información de Pago",
+            programRefund: "Póngase en contacto con nosotros para obtener información detallada sobre precios y pagos.",
             readyForJourneyTitle: "Prepárese para el viaje de su hijo",
             phase1Title: "Fase 1: Preparación Sin Problemas",
             phase2Title: "Fase 2: Llegada con Apoyo",
             phase3Title: "Fase 3: Integración Completa",
-            readMoreInfo: "Leer Más Información"
+            readMoreInfo: "Para más información"
         },
         postgraduateStudy: {
             id: "postgraduate-study",
@@ -2329,13 +2323,13 @@ export const content = {
                 "Dos fotos recientes con fondo blanco.",
                 "Prueba de reservas preliminares de vuelo y vivienda."
             ],
-            programRefundTitle: "Precio y Pago",
-            programRefund: "Total: 6.000 € + IVA (21%) = 7.300 € (Incluye todos los servicios administrativos y legales en España; las tasas de matrícula se determinan por especialidad).\nPago: 1.500 € a la firma del contrato; saldo tras la admisión oficial.\nReembolso: Si se deniega la visa, el abogado presenta una apelación gratuita; si es denegación final, reembolso total menos 500 €.",
+            programRefundTitle: "Información de Pago",
+            programRefund: "Póngase en contacto con nosotros para obtener información detallada sobre precios y pagos.",
             readyForJourneyTitle: "Comience su Carrera Académica en España",
             phase1Title: "Fase 1: Preparación Sin Problemas",
             phase2Title: "Fase 2: Llegada con Apoyo",
             phase3Title: "Fase 3: Integración Completa",
-            readMoreInfo: "Leer Más Información"
+            readMoreInfo: "Para más información"
         },
         digitalNomad: {
             id: "digital-nomad",
@@ -2381,13 +2375,13 @@ export const content = {
                 "Pasaporte válido.",
                 "Seguro médico integral."
             ],
-            programRefundTitle: "Pago y Consulta",
-            programRefund: "Aceptamos pagos mediante transferencia bancaria. Contáctenos para una consulta inicial gratuita para evaluar su elegibilidad.",
+            programRefundTitle: "Información de Pago",
+            programRefund: "Póngase en contacto con nosotros para obtener información detallada sobre precios y pagos.",
             readyForJourneyTitle: "Prepárese para su viaje de Nómada Digital",
             phase1Title: "Fase 1: Preparación Sin Problemas",
             phase2Title: "Fase 2: Llegada con Apoyo",
             phase3Title: "Fase 3: Integración Completa",
-            readMoreInfo: "Leer Más Información"
+            readMoreInfo: "Para más información"
         },
         nonLucrative: {
             id: "non-lucrative",
@@ -2433,13 +2427,13 @@ export const content = {
                 "Prueba de alojamiento en España (contrato de alquiler o escritura).",
                 "Pasaporte válido por al menos un año."
             ],
-            programRefundTitle: "Precio y Pago",
-            programRefund: "Total: 7.500€ + IVA (21%) = 9.300€ (incluye todos los servicios, procedimientos y tasas administrativas en España).\nPago: 50% a la firma del contrato.\nReembolso: En caso de denegación de visado, se deducen 500€ por gastos legales/administrativos; el resto se reembolsa en un plazo de 15 días hábiles.",
+            programRefundTitle: "Información de Pago",
+            programRefund: "Póngase en contacto con nosotros para obtener información detallada sobre precios y pagos.",
             readyForJourneyTitle: "Prepárese para su nueva vida en España",
             phase1Title: "Fase 1: Preparación Sin Problemas",
             phase2Title: "Fase 2: Llegada con Apoyo",
             phase3Title: "Fase 3: Integración Completa",
-            readMoreInfo: "Leer Más Información"
+            readMoreInfo: "Para más información"
         },
         familyReunification: {
             id: "family-reunification",
@@ -2487,13 +2481,13 @@ export const content = {
                 "Seguro médico o prueba de cobertura sanitaria.",
                 "Antecedentes penales del solicitante."
             ],
-            programRefundTitle: "Precio y Pago",
-            programRefund: "Total: 3.500€ + IVA (21%) = 4.200€ (incluye todos los servicios, procedimientos y tasas administrativas en España).\nPago: 50% a la firma del contrato.\nReembolso: En caso de denegación de visado, se deducen 500€ por gastos legales/administrativos; el resto se reembolsa en un plazo de 15 días hábiles.",
+            programRefundTitle: "Información de Pago",
+            programRefund: "Póngase en contacto con nosotros para obtener información detallada sobre precios y pagos.",
             readyForJourneyTitle: "Prepárese para reunir a su familia",
             phase1Title: "Fase 1: Preparación Sin Problemas",
             phase2Title: "Fase 2: Llegada con Apoyo",
             phase3Title: "Fase 3: Integración Completa",
-            readMoreInfo: "Leer Más Información"
+            readMoreInfo: "Para más información"
         },
         tourism: {
             id: "tourism",
@@ -2584,35 +2578,35 @@ export const content = {
                     description: "Perfecto para familias e individuos centrados en el ocio puro, la cultura y la relajación.",
                     focus: "Turismo y Ocio",
                     uniqueFeatures: ["Visitas a monumentos icónicos", "Gastronomía auténtica", "Excursiones históricas"],
-                    priceHint: "Tarifas Estándar"
+                    priceHint: "Contactar para precios"
                 },
                 {
                     name: "Turismo Inteligente (Dirigido)",
                     description: "Diseñado para quienes exploran oportunidades educativas y profesionales en España.",
                     focus: "Exploración Académica",
                     uniqueFeatures: ["Visitas guiadas a campus", "Asesoramiento de admisión", "Networking profesional"],
-                    priceHint: "Paquete de Educación"
+                    priceHint: "Contactar para precios"
                 },
                 {
                     name: "Turismo Inteligente (Vía de Residencia)",
                     description: "Viajes de alto nivel combinados con pasos legales preliminares para la residencia.",
                     focus: "Preparación de Residencia",
                     uniqueFeatures: ["Perfilado legal preliminar", "Búsqueda de zonas de reubicación", "Verificación de documentos"],
-                    priceHint: "Incluye Crédito Legal"
+                    priceHint: "Contactar para precios"
                 },
                 {
                     name: "Turismo VIP (Vía de Residencia)",
                     description: "La estrategia de lujo definitiva supervisada por expertos para personas de alto patrimonio.",
                     focus: "Reubicación de Élite",
                     uniqueFeatures: ["Hoteles de lujo de 5 estrellas", "Estrategia privada con el Dr. Abdelrahman", "Acceso exclusivo a inversiones"],
-                    priceHint: "Tarifas Premium"
+                    priceHint: "Contactar para precios"
                 },
                 {
                     name: "Turismo Inteligente (Inversión)",
                     description: "Centrado en identificar oportunidades inmobiliarias y de negocio en el mercado español.",
                     focus: "Negocios e Inmobiliaria",
                     uniqueFeatures: ["Tours de visualización de propiedades", "Sesiones de análisis de mercado", "Orientación sobre Golden Visa"],
-                    priceHint: "Tarifas de Departamento de Inversión"
+                    priceHint: "Contactar para precios"
                 }
             ],
             ctaBlock: {
@@ -2650,7 +2644,7 @@ export const content = {
             phone: "+34 610 99 29 38",
             email: "khatwa.es@gmail.com",
             legalTitle: "Información Legal",
-            legalText: "Khatwa está oficialmente registrada en España, cumpliendo con todas las regulaciones locales y de la UE para proporcionar servicios educativos y de residencia.",
+            legalText: "Khatwa es una entidad de consultoría profesional dirigida por el Dr. Abdelrahman Hamad, registrada en España.",
             followTitle: "Síguenos",
             socialLinks: socialLinks,
             copyright: "© 2026 Khatwa. Todos los derechos reservados."

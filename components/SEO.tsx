@@ -9,7 +9,7 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({ data, lang }) => {
     const { title, description, keywords, image, url } = data;
-    const siteUrl = 'https://khatwa.es'; // Replace with actual domain
+    const siteUrl = 'https://khatwa.vercel.app/'; // Replace with actual domain
     const currentUrl = url ? `${siteUrl}${url}` : siteUrl;
 
     return (

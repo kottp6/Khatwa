@@ -20,6 +20,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const { slides, cta } = content;
 
   const nextSlide = () => {
@@ -35,9 +36,10 @@ const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
   };
 
   useEffect(() => {
+    if (isPaused) return;
     const slideInterval = setInterval(nextSlide, 8000);
     return () => clearInterval(slideInterval);
-  }, [slides.length]);
+  }, [slides.length, isPaused]);
 
   // Animation variants for staggered text
   const sentenceVariants = {
@@ -129,7 +131,12 @@ const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
   };
 
   return (
-    <section id="home" className="relative h-screen min-h-[700px] w-full overflow-hidden bg-slate-900">
+    <section
+      id="home"
+      className="relative h-screen min-h-[700px] w-full overflow-hidden bg-slate-900"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
 
       {/* Background Image Carousel with Ken Burns Effect */}
       <AnimatePresence initial={false} mode="popLayout">
@@ -169,8 +176,8 @@ const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
               <h1 className={cn(
                 "font-bold text-white mb-6 drop-shadow-2xl tracking-tight",
                 language === 'ar'
-                  ? "text-5xl md:text-7xl leading-normal font-medium py-2"
-                  : "text-5xl md:text-7xl lg:text-8xl"
+                  ? "text-5xl md:text-6xl leading-normal font-medium py-2"
+                  : "text-3xl md:text-3xl lg:text-7xl"
               )}>
                 {renderTitle(slides[currentIndex].title)}
               </h1>

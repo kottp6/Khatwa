@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import type { FounderLink } from '../types';
-import { ArrowRight, X } from 'lucide-react';
-import profile from '../assets/profile.webp';
-import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-// Utility for merging tailwind classes
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
@@ -28,17 +26,16 @@ interface HomeAboutProps {
   language?: string;
 }
 
-const HomeAbout: React.FC<HomeAboutProps> = ({ content, onNavigate, language = 'en' }) => {
-  const [isImageOpen, setIsImageOpen] = useState(false);
-
-  // Animation variants
+const HomeAbout: React.FC<HomeAboutProps> = ({
+  content,
+  onNavigate,
+  language = 'en',
+}) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
@@ -52,175 +49,105 @@ const HomeAbout: React.FC<HomeAboutProps> = ({ content, onNavigate, language = '
   };
 
   return (
-    <>
-      <section className="relative py-24 overflow-hidden bg-slate-50">
-        {/* Decorative background elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-blue-100/50 blur-3xl opacity-60" />
-          <div className="absolute top-[40%] -right-[10%] w-[40%] h-[40%] rounded-full bg-amber-100/50 blur-3xl opacity-60" />
-        </div>
+    <section className="relative py-28 bg-slate-50 overflow-hidden">
+      {/* Background accents */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-100/40 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 -right-40 w-[400px] h-[400px] bg-amber-100/40 rounded-full blur-3xl" />
 
-        <div className="container relative mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={containerVariants}
-            className="max-w-6xl mx-auto"
+      <div className="container relative mx-auto px-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          className="max-w-5xl mx-auto text-center"
+        >
+          {/* Title */}
+          <motion.h2
+            variants={itemVariants}
+            className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 relative inline-block"
           >
-            {/* Header Section */}
-            <motion.div variants={itemVariants} className="text-center mb-16 md:mb-20">
-              <h2 className="inline-block relative z-10 text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
-                {content.title}
-                <span className="absolute -bottom-2 left-0 w-full h-3 bg-[#D9B44A]/20 -z-10 rounded-sm transform -rotate-1"></span>
-              </h2>
-              <p className={cn(
-                "max-w-3xl mx-auto text-slate-600 leading-relaxed font-light",
-                language === 'ar' ? "text-xl md:text-2xl leading-loose font-medium" : "text-lg md:text-xl"
-              )}>
-                {content.intro}
-              </p>
-            </motion.div>
+            {content.title}
+            <span className="absolute -bottom-2 left-0 w-full h-3 bg-[#D9B44A]/30 -z-10 rounded-md" />
+          </motion.h2>
 
-            {/* Main Content Grid */}
-            <div className="grid md:grid-cols-12 gap-12 lg:gap-20 items-center mb-16">
-
-              {/* Profile Card */}
-              <motion.div
-                variants={itemVariants}
-                className="md:col-span-5 lg:col-span-5"
-              >
-                <div className="relative group perspective-1000">
-                  <motion.div
-                    whileHover={{ scale: 1.02, rotateY: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 z-10 "
-                  >
-                    {/* Card Header Background */}
-                    <div className="h-24 bg-gradient-to-r from-[#0A2342] to-[#163a66]" />
-
-                    <div className="px-8 pb-8 text-center -mt-12">
-                      <div
-                        className="relative w-40 h-40 mx-auto mb-6 cursor-pointer group-hover:shadow-lg transition-shadow duration-300 rounded-full"
-                        onClick={() => setIsImageOpen(true)}
-                      >
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#D9B44A] to-amber-200 p-1">
-                          <img
-                            src={profile}
-                            alt={content.founderName}
-                            className="w-full h-full rounded-full object-contain bg-white border-4 border-[#D9B44A]"
-                          />
-                        </div>
-                        <div className="absolute inset-0 rounded-full bg-black/0 group-hover:bg-black/10 flex items-center justify-center transition-colors duration-300">
-                          <span className="opacity-0 group-hover:opacity-100 text-white font-medium text-sm bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">View</span>
-                        </div>
-                      </div>
-
-                      <h4 className="text-2xl font-bold text-slate-900 mb-1">{content.founderName}</h4>
-                      <p className="text-[#D9B44A] font-semibold text-sm uppercase tracking-wider mb-6">{content.founderCredentials}</p>
-
-                      <div className="flex flex-wrap justify-center gap-3">
-                        {content.founderLinks.map(({ icon: Icon, url, text }) => (
-                          <a
-                            key={url}
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-slate-600 bg-slate-50 hover:bg-[#0A2342] hover:text-white rounded-full transition-all duration-300 shadow-sm hover:shadow"
-                          >
-                            <Icon className="w-4 h-4 mr-2" />
-                            {text}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                  {/* Decorative card shadow element */}
-                  <div className="absolute inset-0 bg-[#D9B44A] rounded-2xl transform translate-x-3 translate-y-3 -z-10 opacity-30" />
-                </div>
-              </motion.div>
-
-              {/* Bio / Text Area */}
-              <motion.div
-                variants={itemVariants}
-                className="md:col-span-7 lg:col-span-7"
-              >
-                <div className="prose prose-lg prose-slate max-w-none">
-                  <h3 className="text-2xl font-bold text-slate-800 mb-6 flex items-center">
-                    <span className="w-8 h-1 bg-[#D9B44A] mr-4 rounded-full"></span>
-                    {content.ourVisionary}
-                  </h3>
-                  <p className={cn(
-                    "text-slate-600 leading-relaxed mb-8",
-                    language === 'ar' ? "text-xl leading-loose" : "text-lg"
-                  )}>
-                    {content.founderBio || "Driven by a passion for innovation and community, we strive to make every step count. Join us on this journey of transformation and growth."}
-                    {/* Fallback text if bio is empty in props */}
-                  </p>
-
-                  <div className="grid sm:grid-cols-2 gap-6 mt-8">
-                    {content.values.map((item, idx) => (
-                      <div key={idx} className="flex items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[#0A2342] mr-4">
-                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                        </div>
-                        <span className="font-semibold text-slate-700">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mt-12 flex justify-start">
-                  <button
-                    onClick={onNavigate}
-                    className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-[#0A2342] font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A2342] hover:bg-[#153457]"
-                    role="button"
-                  >
-                    {content.readMore}
-                    <div className="absolute -inset-2 rounded-xl bg-[#D9B44A] opacity-20 group-hover:opacity-40 blur-lg transition-opacity duration-200" />
-                  </button>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Full Screen Image Modal */}
-      <AnimatePresence>
-        {isImageOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
-            onClick={() => setIsImageOpen(false)}
+          {/* Intro */}
+          <motion.p
+            variants={itemVariants}
+            className={cn(
+              'mx-auto max-w-3xl text-slate-600 mb-16',
+              language === 'ar'
+                ? 'text-xl leading-loose font-medium'
+                : 'text-lg md:text-xl leading-relaxed'
+            )}
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center"
+            {content.intro}
+          </motion.p>
+
+          {/* Vision */}
+          <motion.div variants={itemVariants} className="mb-16">
+            <h3 className="text-2xl font-bold text-slate-800 mb-6 flex justify-center items-center gap-4">
+              <span className="w-10 h-1 bg-[#D9B44A] rounded-full" />
+              {content.ourVisionary}
+              <span className="w-10 h-1 bg-[#D9B44A] rounded-full" />
+            </h3>
+
+            <p
+              className={cn(
+                'text-slate-600 max-w-4xl mx-auto',
+                language === 'ar'
+                  ? 'text-xl leading-loose'
+                  : 'text-lg leading-relaxed'
+              )}
             >
-              <button
-                onClick={() => setIsImageOpen(false)}
-                className="absolute -top-12 right-0 text-white/80 hover:text-white transition-colors p-2"
-                aria-label="Close image"
-              >
-                <X size={32} />
-              </button>
-
-              <img
-                src={profile}
-                alt={content.founderName}
-                className="max-h-[85vh] w-auto object-contain rounded-lg shadow-2xl"
-              />
-            </motion.div>
+              {content.founderBio}
+            </p>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+
+          {/* Values Grid */}
+          <motion.div
+            variants={itemVariants}
+            className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mb-20"
+          >
+            {content.values.map((value, idx) => (
+              <div
+                key={idx}
+                className="group bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all"
+              >
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-blue-50 flex items-center justify-center text-[#0A2342] group-hover:scale-110 transition">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <p className="font-semibold text-slate-700">{value}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* CTA */}
+          <motion.div variants={itemVariants}>
+            <button
+              onClick={onNavigate}
+              className="group relative inline-flex items-center gap-3 px-10 py-4 text-base font-bold text-white bg-[#0A2342] rounded-xl hover:bg-[#153457] transition"
+            >
+              {content.readMore}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
+              <span className="absolute -inset-2 bg-[#D9B44A]/30 blur-lg opacity-0 group-hover:opacity-100 transition rounded-xl" />
+            </button>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

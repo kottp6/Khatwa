@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FAQ from './components/FAQ';
 import ScrollToTop from './components/ScrollToTop';
+import WhatsAppButton from './components/WhatsAppButton';
 import SplashScreen from './components/SplashScreen';
 import PageLoader from './components/PageLoader';
 import SEO from './components/SEO';
@@ -152,6 +153,7 @@ const App: React.FC = () => {
           </main>
           <Footer content={currentContent.footer} />
           <ScrollToTop />
+          <WhatsAppButton />
         </div>
       )}
     </HelmetProvider>
