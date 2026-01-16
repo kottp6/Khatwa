@@ -95,7 +95,7 @@ const socialLinks: SocialLink[] = [
     },
     {
         name: "Instagram",
-        url: "https://www.instagram.com/khatwa.es",
+        url: "https://www.instagram.com/khatwa.spain?utm_source=qr&igsh=Z2t5ajBwa21scmRp",
         icon: icons.Instagram
     },
     {
@@ -336,6 +336,12 @@ const esOtherServices: OtherServiceItem[] = [
 
 const enServicesOverviewCategories: ServiceOverviewCategory[] = [
     {
+        title: "Tourism Programs",
+        items: [
+            { title: "Premium Tourism Program", description: "A unified experience offering everything from pure leisure to investment and residency-focused scouting.", page: "tourism" }
+        ]
+    },
+    {
         title: "Study Programs",
         items: [
             { title: "Technical Training", description: "A fast track to a European career via official vocational training programs with paid internships.", page: "study" },
@@ -350,13 +356,8 @@ const enServicesOverviewCategories: ServiceOverviewCategory[] = [
             { title: "Non-Lucrative Visa", description: "Settle in Spain without professional activities, ideal for those with passive income or savings.", page: "non-lucrative" },
             { title: "Family Reunification Visa", description: "Bring your family members to live with you legally in Spain.", page: "family-reunification" }
         ]
-    },
-    {
-        title: "Tourism Programs",
-        items: [
-            { title: "Premium Tourism Program", description: "A unified experience offering everything from pure leisure to investment and residency-focused scouting.", page: "tourism" }
-        ]
     }
+    
 ];
 
 const arServicesOverviewCategories: ServiceOverviewCategory[] = [
@@ -812,6 +813,12 @@ export const content = {
                     },
                     categories: [
                         {
+                            title: "Tourism Programs",
+                            items: {
+                                tourism: "Premium Tourism Program",
+                            }
+                        },
+                        {
                             title: "Study Programs",
                             items: {
                                 study: "Vocational & Technical Training",
@@ -826,13 +833,8 @@ export const content = {
                                 nonLucrative: "Non-Lucrative Visa",
                                 familyReunification: "Family Reunification Visa",
                             }
-                        },
-                        {
-                            title: "Tourism Programs",
-                            items: {
-                                tourism: "Premium Tourism Program",
-                            }
                         }
+                        
                     ]
                 },
                 faq: "FAQ",

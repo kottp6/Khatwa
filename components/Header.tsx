@@ -50,7 +50,7 @@ export const socialLinks = [
   {
     name: 'Instagram',
     icon: FaInstagram,
-    url: 'https://www.instagram.com/khatwa.es',
+    url: 'https://www.instagram.com/khatwa.spain?utm_source=qr&igsh=Z2t5ajBwa21scmRp',
   },
 ]
 
