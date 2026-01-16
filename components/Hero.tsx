@@ -173,14 +173,18 @@ const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
               className="flex flex-col items-center"
             >
               {/* Title */}
-              <h1 className={cn(
-                "font-bold text-white mb-6 drop-shadow-2xl tracking-tight",
-                language === 'ar'
-                  ? "text-5xl md:text-6xl leading-normal font-medium py-2"
-                  : "text-2xl md:text-3xl lg:text-7xl"
-              )}>
-                {renderTitle(slides[currentIndex].title)}
-              </h1>
+              <h1
+  className={cn(
+    "font-bold text-white mb-6 drop-shadow-2xl tracking-tight",
+    language === 'ar'
+      ? "text-5xl md:text-6xl leading-normal font-medium py-2"
+      : language === 'es'
+        ? "text-xl sm:text-2xl md:text-3xl lg:text-7xl"
+        : "text-2xl md:text-3xl lg:text-7xl"
+  )}
+>
+  {renderTitle(slides[currentIndex].title)}
+</h1>
 
               {/* Subtitle / Description */}
               <p className={cn(
