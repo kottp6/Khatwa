@@ -177,7 +177,7 @@ const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
                 "font-bold text-white mb-6 drop-shadow-2xl tracking-tight",
                 language === 'ar'
                   ? "text-5xl md:text-6xl leading-normal font-medium py-2"
-                  : "text-3xl md:text-3xl lg:text-7xl"
+                  : "text-2xl md:text-3xl lg:text-7xl"
               )}>
                 {renderTitle(slides[currentIndex].title)}
               </h1>
